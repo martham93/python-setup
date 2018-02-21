@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-21T13:41:13-07:00</updated><id>http://localhost:4000/</id><title type="html">Earth Data Science - Earth Lab</title><subtitle>Code, tutorials, and tools for modern Earth analytics</subtitle><author><name>Earth Analytics</name><email>earth.lab@colorado.edu</email></author><entry><title type="html">Text Editors for the Command Line and Scientific Programming</title><link href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/" rel="alternate" type="text/html" title="Text Editors for the Command Line and Scientific Programming" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-04-text-editors-for-science-workflows</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#why-you-need-a-good-text-editor&quot; id=&quot;markdown-toc-why-you-need-a-good-text-editor&quot;&gt;Why You Need a Good Text Editor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#features-to-look-for-in-a-text-editor&quot; id=&quot;markdown-toc-features-to-look-for-in-a-text-editor&quot;&gt;Features to Look For in a Text Editor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-your-default-text-editor&quot; id=&quot;markdown-toc-what-is-your-default-text-editor&quot;&gt;What is your Default Text Editor?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-vim-text-editor&quot; id=&quot;markdown-toc-the-vim-text-editor&quot;&gt;The Vim Text Editor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#commonly-used-text-editors&quot; id=&quot;markdown-toc-commonly-used-text-editors&quot;&gt;Commonly Used Text Editors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#additional-resources&quot; id=&quot;markdown-toc-additional-resources&quot;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;In this lesson you will learn about features to look for in a text editor and how to change your default text editor at the command line&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;Explain how text editors are used in a scientific workflow&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;Change your default text editor in the command line&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+
+  &lt;p&gt;Make sure you have followed the installation instructions already from &lt;a href=&quot;/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/&quot;&gt;Setup Git/Bash lesson.&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;Information below is adapted from materials by &lt;a href=&quot;http://installation.software-carpentry.org/&quot;&gt;Software Carpentry&lt;/a&gt; and &lt;a href=&quot;https://cs61a.org/articles/vim.html#introduction&quot;&gt;UC Berkeley CS61a&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;why-you-need-a-good-text-editor&quot;&gt;Why You Need a Good Text Editor&lt;/h2&gt;
+
+&lt;p&gt;The right text editor and / or coding gui (graphical user interface) environments makes a scientific workflow more efficient. You will use text editors for many different purposes including:
+Interacting with tools at that command line: For example, you use a text editor when you use git for version control to write merge and commit message.
+Writing bash scripts to process files: If you want to very quickly process a large set of text files, you will often use bash / the command line. You will use a text editor to write that script.
+Scientific programming: Many scientists and coders work in a text editor to write their code. 
+Often the default text editor setup for your command line environment, is not a graphical text editor. You may want to change the default text editor depending on your workflow. 
+In this lesson, you will learn about the different features to look for in a text editor and how to set your default text editor.&lt;/p&gt;
+
+&lt;h2 id=&quot;features-to-look-for-in-a-text-editor&quot;&gt;Features to Look For in a Text Editor&lt;/h2&gt;
+
+&lt;p&gt;Certain features to look for in a text editor include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Automatic Color-coding: In a normal text editor, all of the text is the same color. However, when the text editor is optimized for coding, different parts of your code will be colored in different ways. For instance, all comments might be displayed using the color grey. Common functions may be blue and so on. This allows you to quickly scan and easily review and scan your code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/courses/earth-analytics-python/python-interface/non-color-code.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/courses/earth-analytics-python/python-interface/non-color-code.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Code that is rendered in a text editor with no color coding.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/courses/earth-analytics-python/python-interface/color-code.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/courses/earth-analytics-python/python-interface/color-code.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Notice that various types of commands are colored differently making is easier to quickly scan and review the code.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Running Code: A text editor lets you write and save a script that is ready to be run in the terminal. Some text editors and gui environments also allow you to run code inline.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Find and Replace: If you want to change a word that you’ve used multiple times in a file instead of manually changing that word many times, you can use the find and replace feature to let the text editor automatically change that word.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some scientists will only code in a text editor. Others will use a text editor for some tasks and Jupyter Notebooks (or some other coding GUI) for others. You will figure out your preferred workflow as you code more!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-your-default-text-editor&quot;&gt;What is your Default Text Editor?&lt;/h2&gt;
+
+&lt;p&gt;Most operating systems come with a default text editor as described below. While choosing a text editor is a very personal preference, for this course,  if you don’t already have a favorite, we  recommend the &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt; text editor which will run on mac, linux, and windows. You can use whatever text editor you are most comfortable, but mainly for this course we will be working in Jupyter Notebook. However, it is important to be familiar with text editors because they are powerful tools that many scientists use to write code. If you use git, you will need a text editor to create some commit and merge messages.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-vim-text-editor&quot;&gt;The Vim Text Editor&lt;/h2&gt;
+
+&lt;p&gt;Vim is the default text editor for  Mac OS X, Linux, and Windows (if windows has git bash installed). Vim is a text editor designed to support the command line / terminal interface. This means that rather than buttons to save, open and close files, you need to use the correct key commands as follows:&lt;/p&gt;
+
+&lt;p&gt;To open vim, type &lt;code class=&quot;highlighter-rouge&quot;&gt;vim&lt;/code&gt; at the command line. Like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When you open vim, you’ll get a screen like the one below:&lt;/p&gt;
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/courses/earth-analytics-python/python-interface/vim.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/courses/earth-analytics-python/python-interface/vim.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Welcome screen of vim.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Once you are in vim there is one core commands that you need to know about - how to exit vim.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How to exit vim&lt;/strong&gt; : If you need to exit vim, type the following: hit escape to bring up a prompt where you can type. Then type &lt;code class=&quot;highlighter-rouge&quot;&gt;:q!&lt;/code&gt; (colon, lower-case ‘q’, exclamation mark). Hit return and you will return to the terminal.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-edit-a-new-file-in-vim&quot;&gt;How To Edit A New file in Vim&lt;/h3&gt;
+
+&lt;p&gt;If you want to edit a new file in vim, then you need to be in insert mode. Insert mode, which allows you to use Vim like a regular text editor – you press keys, and the corresponding characters will show up on the screen.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To enter the insert mode press &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;,&lt;/li&gt;
+  &lt;li&gt;When you are done editing your file, you may want to save it. There are 5 steps to saving and the exiting a file
+    &lt;ol&gt;
+      &lt;li&gt;Enter normal mode (press ESC)&lt;/li&gt;
+      &lt;li&gt;Enter command mode (press :)&lt;/li&gt;
+      &lt;li&gt;(Press w) filename.txt&lt;/li&gt;
+      &lt;li&gt;(Press Enter)&lt;/li&gt;
+      &lt;li&gt;Exit Vim :q! Return&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+Before saving a file in vim it’s a good idea to check what your working directory is because that’s where it will be saved. To do that after you are in the command mode type pwd. If you would want to save that file in a different directory Press w filepath/filename.txt&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-open-an-existing-file-in-vim&quot;&gt;How to Open an Existing File in Vim&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Next, let’s open the earth-analytics.txt file that we just saved from vim. To open an existing file, type&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Vim name-of-file-here&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim earth-analytics-test.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;how-to-edit-an-existing-file-in-vim&quot;&gt;How to Edit an Existing File in Vim&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To edit files make sure you are in the insert mode by pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;. To save your edits follow the file save    commands:
+    &lt;ul&gt;
+      &lt;li&gt;Enter normal mode (press ESC)&lt;/li&gt;
+      &lt;li&gt;Enter command mode (press :)&lt;/li&gt;
+      &lt;li&gt;Press w filename.txt&lt;/li&gt;
+      &lt;li&gt;Press Enter&lt;/li&gt;
+      &lt;li&gt;Exit Vim :q! Return&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are working on Linux or on may cloud and High Performance Communing (HPC) environments you may prefer a non-graphical text editor like Vim. However for this course, if you are running a Mac or Windows operating system and haven’t used Vim before, we recommend you work in Atom.&lt;/p&gt;
+
+&lt;h2 id=&quot;commonly-used-text-editors&quot;&gt;Commonly Used Text Editors&lt;/h2&gt;
+
+&lt;p&gt;You can define any text editor that is installed on your computer, as the default text editor. A few that are often uses include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad ++  (just Windows)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nano-editor.org/&quot;&gt;Nano&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;lt;div class =  ‘notice–success’ markdown = 1 &amp;gt;&lt;/p&gt;
+&lt;h3 id=&quot;why-we-recommend-using-atom&quot;&gt;Why we recommend using Atom&lt;/h3&gt;
+
+&lt;p&gt;If you don’t already have a favorite text editor, we suggest you use Atom in this course. We like atom because:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It’s free and open source!&lt;/li&gt;
+  &lt;li&gt;It supports &lt;a href=&quot;https://earthdatascience.org/courses/intro-version-control-git/&quot;&gt;git / github integration&lt;/a&gt; which makes it easier to collaborate with others to write code, address merge conflicts and other common git operations.&lt;/li&gt;
+  &lt;li&gt;It has code highlighting support&lt;/li&gt;
+  &lt;li&gt;Atom has an active development community which means lots of extra packages are available to gain extra features. For example: &lt;a href=&quot;https://github.com/atom/markdown-preview&quot;&gt;Markdown Preview&lt;/a&gt; lets you write code in markdown in a .md file and preview the rendered output in a different window. &lt;a href=&quot;https://atom.io/packages/hydrogen&quot;&gt;Hydrogen package&lt;/a&gt;, allows you to run code inline in Atom, similar to a Jupyter notebook.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;check-and-change-your-default-text-editor&quot;&gt;Check and Change Your Default Text Editor&lt;/h3&gt;
+
+&lt;p&gt;Check Default Editor&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git var &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Look at the GIT_EDITOR part of the output. Vi means vim.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GIT_EDITOR=vi&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To change your default text editor, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;git config&lt;/code&gt; - IF git is installed on your computer already. Open your terminal and use the table below to change your default text editor. IMPORTANT: in order to change your default text editor, the text editor of your choice needs to be already installed on your computer! If it is not installed, the command below will not work.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Editor&lt;/th&gt;
+      &lt;th&gt;Configuration command&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Atom&lt;/td&gt;
+      &lt;td&gt;git config –global core.editor “atom –wait”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;nano&lt;/td&gt;
+      &lt;td&gt;git config –global core.editor “nano -w”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sublime Text (Mac)&lt;/td&gt;
+      &lt;td&gt;git config –global core.editor “subl -n -w”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sublime Text (Win, 32-bit install)&lt;/td&gt;
+      &lt;td&gt;git config –global core.editor “‘c:/program files (x86)/sublime text  3/sublime_text.exe’ -w”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sublime Text (Win, 64-bit install)&lt;/td&gt;
+      &lt;td&gt;git config –global core.editor “‘c:/program files/sublime text 3/sublime_text.exe’ -w”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Notepad++ (Win, 32-bit install)&lt;/td&gt;
+      &lt;td&gt;git config –global core.editor “‘c:/program files (x86)/Notepad++/notepad++.exe’ -multiInst -notabbar -nosession -noPlugin”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Notepad++ (Win, 64-bit install)&lt;/td&gt;
+      &lt;td&gt;git config –global core.editor “‘c:/program files/Notepad++/notepad++.exe’ -multiInst -notabbar -nosession -noPluginin”&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;notice--info&quot;&gt;
+
+  &lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
+
+  &lt;p&gt;If you are interested in learning more about the features of &lt;a href=&quot;https://cs61a.org/articles/atom.html&quot;&gt;atom&lt;/a&gt;, &lt;a href=&quot;https://cs61a.org/articles/sublime.html&quot;&gt;sublime&lt;/a&gt;, or &lt;a href=&quot;https://cs61a.org/articles/vim.html&quot;&gt;vim&lt;/a&gt; check out these guides.&lt;/p&gt;
+
+  &lt;p&gt;Vim also has a built-in interactive guide, which you can start from the terminal by typing. This tutorial will help you get accustomed to basic Vim commands.&lt;/p&gt;
+
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vimulator 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+
+&lt;/div&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text editor at the command line.</summary></entry><entry><title type="html">Set up Conda Envrionment</title><link href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/" rel="alternate" type="text/html" title="Set up Conda Envrionment" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-03-setup-conda-earth-analytics-environment</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#set-up-a-conda-python-environment&quot; id=&quot;markdown-toc-set-up-a-conda-python-environment&quot;&gt;Set up A Conda Python Environment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#manage-your-conda-environment&quot; id=&quot;markdown-toc-manage-your-conda-environment&quot;&gt;Manage Your Conda Environment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;In this lesson you will learn how to install a conda environment designed specifically for this class called earth-analytics-python from a yaml file&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;install anaconda&lt;/li&gt;
+    &lt;li&gt;install a new environment&lt;/li&gt;
+    &lt;li&gt;view the available environments&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+
+  &lt;p&gt;You should have Shell and the Anaconda distribution of python 3.x setup on your computer and an Earth Analytics working directory. Use the lessons below to help you get setup:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Completed the setup shell and conda lesson&lt;/li&gt;
+    &lt;li&gt;Have an Earth Analytics Directory on your computer&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Information below is adapted from materials developed by the Conda documentation for &lt;a href=&quot;https://conda.io/docs/user-guide/install/index.html&quot;&gt;installing conda&lt;/a&gt; and &lt;a href=&quot;https://conda.io/docs/user-guide/tasks/manage-pkgs.html&quot;&gt;managing packages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up-a-conda-python-environment&quot;&gt;Set up A Conda Python Environment&lt;/h2&gt;
+
+&lt;h3 id=&quot;install-the-earth-lab-conda-environment&quot;&gt;Install the Earth Lab Conda Environment&lt;/h3&gt;
+
+&lt;p&gt;Anaconda allows you to have different environments installed on your computer to access different versions of python and different libraries. Sometimes libraries conflict which causes errors and packages not to work. To avoid conflicts, we created an environment specifically for this earth analytics course that contains all of the spatial libraries that you will need.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+For more information about conda environments check out the &lt;a href=&quot;https://conda.io/docs/user-guide/tasks/index.html&quot;&gt;conda documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To install the earth lab environment you will be working in the terminal.&lt;/p&gt;
+
+&lt;h3 id=&quot;where-to-install-python-libraries-from&quot;&gt;Where to Install Python Libraries From&lt;/h3&gt;
+
+&lt;p&gt;There are many different python repositories that house  libraries like geopandas. To access each repository, you use a command at the terminal.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;pip install installs libraries using pip from a pip specific repo&lt;/li&gt;
+  &lt;li&gt;Conda install installs libraries using the conda repo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For this class, most python libraries will be installed with &lt;code class=&quot;highlighter-rouge&quot;&gt;conda-forge&lt;/code&gt; to reduce the potential of installation conflicts.&lt;/p&gt;
+
+&lt;h3 id=&quot;about-the-conda-environment&quot;&gt;About the Conda Environment&lt;/h3&gt;
+
+&lt;p&gt;Let’s take a minute to explore the Conda python environment! Notice at the top of the file there is the environment name. This file has a few key parts:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;NAME: the name of the environment that you will call when you wish to activate the environment. The name earth-analytics-python is defined in the environment.yml file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Channels: this lists where packages will be installed from. There are many options including conda, conda-forge and pip. You will be predominately using conda-forge for all of the earth-analytics courses.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dependencies: Dependencies are all of the things that you need installed in order for the environment to be complete. In the example, python version 3.6 is specified because this is because it works best with gdal. The order in which the libraries should be installed is also specified.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;use-a-pre-configured-installation-script&quot;&gt;Use a Pre-configured Installation Script&lt;/h3&gt;
+&lt;p&gt;When you work with Anaconda, you can create custom lists that tell anaconda where to install libraries from, and in what order. You can even specify a particular version. You write this list using &lt;a href=&quot;http://yaml.org/&quot;&gt;yaml&lt;/a&gt; (Yet Another Markup Language).&lt;/p&gt;
+
+&lt;p&gt;There is a custom yaml list that you can use to  install all of the python libraries that you will need to complete the lessons in this course. This yaml list is customized to install libraries from the repositories and in an order that minimizes conflicts. If you run into any issues installing the environment from the yaml leave a comment at the bottom of the page.&lt;/p&gt;
+
+&lt;h3 id=&quot;heres-what-part-of-the-yaml-file-looks-like&quot;&gt;Here’s what part of the yaml file looks like:&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: earth-analytics-python
+channels:
+  - conda-forge
+dependencies:
+  # Core scientific python libraries
+  - numpy
+  - matplotlib
+  - python=3.6
+  - pyqt
+  - seaborn
+
+  # spatial libraries
+  - rasterstats
+  - geopy
+  - cartopy
+  - geopandas
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Follow these steps below to get your environment ready.
+An environment for conda has been created specifically for this course. To load this:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download the custom yaml list from &lt;link /&gt;/download button&lt;/li&gt;
+  &lt;li&gt;Move this file into your earth-analytics directory&lt;/li&gt;
+  &lt;li&gt;Open your favorite bash envt. This may cygwin or gitbash on windows or terminal on a mac.&lt;/li&gt;
+  &lt;li&gt;Navigate to your earth-analytics directory on your computer. (remember the cd command in terminal means change directory)&lt;/li&gt;
+  &lt;li&gt;conda env create -f environment.yml&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note that it takes a bit of time to run this setup as it needs to download and install each library
+IMPORTANT: you need to have internet access for this to run!&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+The instructions above will only work if you run them in the directory where you placed the environment.yml file&lt;/p&gt;
+
+&lt;h2 id=&quot;manage-your-conda-environment&quot;&gt;Manage Your Conda Environment&lt;/h2&gt;
+
+&lt;p&gt;You can have different python environments on your computer. Anaconda allows you to easily jump between environments using a set of commands that you run in your terminal. To manage your conda environments, use the following commands:&lt;/p&gt;
+
+&lt;h3 id=&quot;view-a-list-of-all-installed-environments&quot;&gt;View a list of all installed environments&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+conda info &lt;span class=&quot;nt&quot;&gt;--envs&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;activate-the-environment-that-youd-like-to-use&quot;&gt;Activate the environment that you’d like to use&lt;/h3&gt;
+&lt;p&gt;If you want to jupyter notebooks to use a particular environment that you have setup on your computer, you need to activate it. For example if you geopandas is only installed in the earth-analytics-python environment, and not the default anaconda environment, you will not be able to load it in jupyter unless you have the earth-analytics-python environment activated.&lt;/p&gt;
+
+&lt;p&gt;To active an environment, first navigate to your earth-analytics working directory.  Then use the following code at the command line to activate the environment that you want. In this case you will want to activate the earth-analytics-python environment:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source activate earth-analytics-python
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;deactivate-the-environment&quot;&gt;Deactivate the environment&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Source deactivate earth-analytics-python
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Deactivating the environment switches you back to the default environment in your computer. 
+Before doing work for this class always make sure that the earth analytics-python environment is activated. The name of the activate environment will appear in parentheses on the left side of your terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+Notice how after you restart the terminal, the Earth Analytics environment is no longer active. 
+Activate the earth-analytics-python environment by running:&lt;/p&gt;
+
+&lt;div class=&quot;notice--success highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+source activate earth-analytics-python
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">This tutorial walks you through installing a conda environment designed for this class.</summary></entry><entry><title type="html">How to Access and use shell to set up a Working Directory</title><link href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/" rel="alternate" type="text/html" title="How to Access and use shell to set up a Working Directory" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-02-how-to-access-and-use-shell-to-setup-a-working-directory</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-access-bash&quot; id=&quot;markdown-toc-how-to-access-bash&quot;&gt;How to Access Bash&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-a-terminal&quot; id=&quot;markdown-toc-what-is-a-terminal&quot;&gt;What is a Terminal?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#why-use-terminal&quot; id=&quot;markdown-toc-why-use-terminal&quot;&gt;Why use Terminal?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#access-bash&quot; id=&quot;markdown-toc-access-bash&quot;&gt;Access Bash&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bash-commands&quot; id=&quot;markdown-toc-bash-commands&quot;&gt;Bash Commands&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#exercises&quot; id=&quot;markdown-toc-exercises&quot;&gt;Exercises&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;In this tutorial you will access the shell through terminal, use basic commands in the terminal for file organization,  and set up a working directory for the course.&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Open a terminal&lt;/li&gt;
+    &lt;li&gt;Navigate and change directories in the terminal&lt;/li&gt;
+    &lt;li&gt;Access python from the terminal.&lt;/li&gt;
+    &lt;li&gt;Create an easy to use and well structured project structure.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+
+  &lt;p&gt;You will need to have Git and Bash setup on your computer to complete this lesson. Instructions for setting up Git and Bash are here: &lt;a href=&quot;/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/&quot;&gt;Setup Git/Bash lesson&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;how-to-access-bash&quot;&gt;How to Access Bash&lt;/h2&gt;
+
+&lt;p&gt;Information below is adapted from materials developed by: &lt;a href=&quot;https://cs61a.org/lab/lab00/&quot;&gt;U.C. Berkeley’s cs61a&lt;/a&gt;, &lt;a href=&quot;http://swcarpentry.github.io/shell-novice/&quot;&gt;Software Carpentry&lt;/a&gt; and &lt;a href=&quot;https://github.com/thehackerwithin/berkeley/blob/master/code_examples/bash/tutorial.md.&quot;&gt;The Hacker Within, Berkeley&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;get-started-with-the-terminal&quot;&gt;Get Started with the Terminal&lt;/h3&gt;
+
+&lt;p&gt;In the earliest days of computing, the computer itself which processed data or performed operations was separate from the tool that gave it instructions to do the processing. There was:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Terminal: which was used to send commands to the computer and&lt;/li&gt;
+  &lt;li&gt;The computer: the hardware that processed the commands&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Today, we have computers that can both provide commands AND perform the computation. And those computers have graphic interfaces (known as GUIs) that make it easy to perform tasks. However, we still need to access the command line or terminal for certain tasks. In this lesson you will learn how to set up a command line interface on your computer.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/early-terminal.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/early-terminal.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Early Computer and Terminal.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;about-bash&quot;&gt;About Bash&lt;/h3&gt;
+&lt;p&gt;Bash is command line program that allows you to efficiently perform many tasks. You can think of it as the computer in the example above. The command line or terminal is where you provide bash commands that it then executes. This allows you to control your computer by typing in commands entered with a keyboard instead of using buttons or drop down menus in a graphical user interface (GUI) with a mouse/keyboard combination.&lt;/p&gt;
+
+&lt;p&gt;You can use bash to access and process files at the command line. Working with files at the command line is faster and more efficient than working with files in a graphic environment like Windows Explorer or Mac Finder. In bash, you can perform multiple operations on multiple files quickly. You can also write and execute scripts in Bash just like you can in &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt;. Finally, you can use Bash to launch tools like &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; and Jupyter Notebooks. We will be using Python and Jupyter notebooks throughout this class.  (we will use Jupyter in this class).&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt; &lt;strong&gt;Data Tip:&lt;/strong&gt;&lt;br /&gt;
+Bash stands for “bourne again shell”, and is an updated version of shell. Sometimes you will hear bash and shell used interchangeably, but in this course we will use the term bash throughout.&lt;/p&gt;
+
+&lt;p&gt;You access Bash using a terminal program which we will discuss next.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-terminal&quot;&gt;What is a Terminal?&lt;/h2&gt;
+&lt;p&gt;A terminal is the command line interface  that gives you access to bash. There are many different terminal programs and thus the terminal program that you use on your computer will vary according to your operating system. For instance a MAC comes with a terminal program that provides access to Bash already installed. However, on a Windows machine, you will have to install a new program to access bash - like GitBash which we will use in this course.&lt;/p&gt;
+
+&lt;p&gt;For the rest of this course, we will refer to the command line environment that you use to access bash as the terminal. For windows users, this terminal may be opened using a tool like Git Bash.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-use-terminal&quot;&gt;Why use Terminal?&lt;/h2&gt;
+&lt;h4 id=&quot;interact-with-your-computerorganize-files&quot;&gt;Interact with your computer/organize files&lt;/h4&gt;
+
+&lt;p&gt;Using Bash in the terminal is a powerful way of interacting with your computer. GUIs and command line Bash are complementary - by knowing both you will greatly expand the range of tasks you can accomplish with your computer. You will also be able to perform many tasks more efficiently. Common tasks you can run at the command liner include checking the directory you’re in, changing directories, making a new directory, extracting files, and finding files on your computer.&lt;/p&gt;
+
+&lt;h2 id=&quot;access-bash&quot;&gt;Access Bash&lt;/h2&gt;
+
+&lt;p&gt;You access bash differently depending on your operating system.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;OS X: The bash program is called Terminal. You can search for it in Spotlight.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Windows: Git Bash came with your download of Git for Windows. Search Git Bash. For the rest of this course, even if you are on windows, we will refer to the terminal. You are using Git Bash as your terminal.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Linux: Default is usually bash, if not, type bash in the terminal.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bash-commands&quot;&gt;Bash Commands&lt;/h2&gt;
+
+&lt;p&gt;The dollar sign is a prompt, that shows you that bash is waiting for input; your shell may use a different character as a prompt and may add information before the prompt.&lt;/p&gt;
+
+&lt;p&gt;When typing commands, either from these tutorials or from other sources, do not type the dollar sign only the commands that follow it. In these tutorials, subsequent lines that follow a prompt and do not start with $ are the output of the command.&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-bash-commands&quot;&gt;Basic Bash Commands&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ls: lists all files in the current directory in alphabetical order, arranged neatly into columns.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls
+
+&lt;/span&gt;Applications   Documents   Library   Music   Public
+Desktop        Downloads   Movies    Picture
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Your results may be slightly different depending on your operating system and how you have customized your filesystem.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pwd: print working directory- prints the name of the directory you are working from&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt; 
+
+/Users/earthlab
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;cd (path to directory): change into the specified directory&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cd .. (two dots). The .. means “the parent directory” so you can use cd .. to go up one directory.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cd ~ (the tilde). Remember that ~ means home directory, so this command will always change to your home directory.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mkdir (directory name): make a new directory with the given name
+This example will make a new directory called notes inside of the documents directory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;documents 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls &lt;/span&gt;documents 
+
+    data/  elements/  animals.txt  planets.txt  sunspot.txt
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir notes
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls &lt;/span&gt;documents 
+
+	data/  elements/  notes/  animals.txt  planets.txt  sunspot.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice that mkdir command has no ouput, and that since notes is a relative path (i.e., doesn’t have a leading slash), the new directory is created in the current working directory.&lt;/p&gt;
+
+&lt;h2 id=&quot;exercises&quot;&gt;Exercises&lt;/h2&gt;
+
+&lt;p&gt;Project organization is integral to efficient research. Use Bash to  create an earth-analytics project directory. You will use this directory throughout this course.&lt;/p&gt;
+
+&lt;p&gt;You will then create a  \data directory within the earth-analytics directory to save all of the data that you will need to complete the homework assignments and follow along with the course.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-earth-analytics-project-directory&quot;&gt;Create earth-analytics Project Directory&lt;/h3&gt;
+
+&lt;p&gt;Create an earth-analytics project directory (or folder).&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt; &lt;strong&gt;Data Tip:&lt;/strong&gt; 
+Directory vs Folder: You can think of a directory as a folder. However the term directory considers the relationship between that folder and the folders within it and around it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Navigate to the Documents directory on your computer.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;documents
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In the directory, create a NEW DIRECTORY called earth-analytics.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir earth-analytics 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt; &lt;strong&gt;Data Tip:&lt;/strong&gt;
+Notice that you are creating an easy to read directory name. The name has no spaces and uses all lower case to support machine reading down the road. Sometimes this format of naming using dashes is referred to as a slug.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Next change directories to be inside of the earth-analytics directory and create a directory within it called data&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;earth-analytics 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir data 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Let’s go back to the home directory and confirm we can then access the directories we just made.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~ 
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;documents
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;earth-analytics 
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls 
+
+&lt;/span&gt;data/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directory for the course.</summary></entry><entry><title type="html">Setup Git, Bash, and Anaconda on Your Computer</title><link href="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/" rel="alternate" type="text/html" title="Setup Git, Bash, and Anaconda on Your Computer" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-01-setup-git-bash-and-anacoda</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bash-setup&quot; id=&quot;markdown-toc-bash-setup&quot;&gt;Bash Setup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#git-setup&quot; id=&quot;markdown-toc-git-setup&quot;&gt;Git Setup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#setup-anaconda&quot; id=&quot;markdown-toc-setup-anaconda&quot;&gt;Setup Anaconda&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;In this lesson you will learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;Install Bash&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;Open a terminal&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;Install anaconda using the terminal&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+
+  &lt;p&gt;Before you start this tutorial, be sure that you have a computer with internet access.&lt;/p&gt;
+
+  &lt;p&gt;Information below is adapted from materials developed by &lt;a href=&quot;https://github.com/swcarpentry/workshop-template&quot;&gt;Data Carpentry&lt;/a&gt; and the &lt;a href=&quot;https://conda.io/docs/user-guide/install/index.html&quot;&gt;Conda documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;bash-setup&quot;&gt;Bash Setup&lt;/h2&gt;
+
+&lt;h3 id=&quot;install-bash-for-windows&quot;&gt;Install Bash for Windows&lt;/h3&gt;
+
+&lt;p&gt;Download the Git for Windows installer.
+Run the installer and follow the steps bellow:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click on “Next”.&lt;/li&gt;
+  &lt;li&gt;Click on “Next”.&lt;/li&gt;
+  &lt;li&gt;Click on “Next”.&lt;/li&gt;
+  &lt;li&gt;Click on “Next”.&lt;/li&gt;
+  &lt;li&gt;Click on “Next”.&lt;/li&gt;
+  &lt;li&gt;Select “Use Git from the Windows Command Prompt” and click on “Next”. If you forgot to do this programs that you need for the workshop will not work properly. If this happens rerun the installer and select the appropriate option.&lt;/li&gt;
+  &lt;li&gt;Click on “Next”. Keep “Checkout Windows-style, commit Unix-style line endings” selected.&lt;/li&gt;
+  &lt;li&gt;Select “Use Windows’ default console window” and click on “Next”.&lt;/li&gt;
+  &lt;li&gt;Click on “Next”.&lt;/li&gt;
+  &lt;li&gt;Click on “Finish”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This will provide you with both Git and Bash in the Git Bash program.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-bash-for-mac-os-x&quot;&gt;Install Bash for Mac OS X&lt;/h3&gt;
+&lt;p&gt;The default shell in all versions of Mac OS X is bash, so no need to install anything. You access bash from the Terminal (found in /Applications/Utilities). You may want to keep Terminal in your dock for this workshop.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-bash-for-linux&quot;&gt;Install Bash for Linux&lt;/h3&gt;
+&lt;p&gt;The default shell is usually Bash, but if your machine is set up differently you can run it by opening a terminal and typing bash. There is no need to install anything.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-setup&quot;&gt;Git Setup&lt;/h2&gt;
+
+&lt;p&gt;Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;. You will need a &lt;a href=&quot;https://help.github.com/articles/supported-browsers/&quot;&gt;supported&lt;/a&gt; web browser (current versions of Chrome, Firefox or Safari, or Internet Explorer version 9 or above).&lt;/p&gt;
+
+&lt;p&gt;Git installation instructions borrowed and modified from &lt;a href=&quot;http://software-carpentry.org/&quot;&gt;Software Carpentry&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-for-windows&quot;&gt;Git for Windows&lt;/h3&gt;
+&lt;p&gt;Git should be installed on your computer as part of your Bash install.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-on-mac-os-x&quot;&gt;Git on Mac OS X&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9LQhwETCdwY&quot;&gt;Video Tutorial&lt;/a&gt;
+Install Git on Macs by downloading and running the most recent installer for “mavericks” if you are using OS X 10.9 and higher -or- if using an earlier OS X, choose the most recent “snow leopard” installer, from &lt;a href=&quot;http://sourceforge.net/projects/git-osx-installer/files/&quot;&gt;this list&lt;/a&gt;. After installing Git, there will not be anything in your /Applications folder, as Git is a command line program.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+If you are running Mac OSX El Capitan, you might encounter errors when trying to use git. Make sure you update XCODE. &lt;a href=&quot;http://stackoverflow.com/questions/32893412/command-line-tools-not-working-os-x-el-capitan&quot;&gt;Read more - a Stack Overflow Issue&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-on-linux&quot;&gt;Git on Linux&lt;/h3&gt;
+&lt;p&gt;If Git is not already available on your machine you can try to install it via your distro’s package manager. For Debian/Ubuntu run &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install git&lt;/code&gt; and for Fedora run &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo yum install git&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;setup-anaconda&quot;&gt;Setup Anaconda&lt;/h2&gt;
+&lt;p&gt;We will use the Anaconda Python 3.x distribution for this course. Anaconda is a distribution of python that comes with many of the libraries that we need to work with scientific data. Anaconda also comes with Jupyter Notebooks and several other tools that are useful for working in Python.&lt;/p&gt;
+
+&lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download the installer: &lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda installer for Windows&lt;/a&gt;. Be sure to download the python 3.x version!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Double-click the .exe file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Follow the instructions on the screen.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you are unsure about any setting, accept the defaults. You can change them later.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When installation is finished, from the Start menu, open the Anaconda Prompt.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;mac&quot;&gt;Mac&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download the installer: &lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda installer for macOS&lt;/a&gt;. Be sure to download the python 3.x version!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install: Anaconda—Double-click the .pkg file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Follow the prompts on the installer screens.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you are unsure about any setting, accept the defaults. You can change them later.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To make the changes take effect, close and then re-open your Terminal window.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;linux&quot;&gt;Linux&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download the installer: &lt;a href=&quot;https://www.anaconda.com/download/&quot;&gt;Anaconda installer for Linux&lt;/a&gt;. Be sure to download the python 3.x version!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In your Terminal window, run: &lt;code class=&quot;highlighter-rouge&quot;&gt;bash Anaconda-latest-Linux-x86_64.sh&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Follow the prompts on the installer screens.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you are unsure about any setting, accept the defaults. You can change them later.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To make the changes take effect, close and then re-open your Terminal window.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">Learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.</summary></entry><entry><title type="html">Introduction to Markdown</title><link href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/" rel="alternate" type="text/html" title="Introduction to Markdown" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/os-05-import-python-packages</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-a-package&quot; id=&quot;markdown-toc-what-is-a-package&quot;&gt;What is a Package?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#where-to-get-python-packages&quot; id=&quot;markdown-toc-where-to-get-python-packages&quot;&gt;Where To Get Python Packages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#import-a-package-in-python&quot; id=&quot;markdown-toc-import-a-package-in-python&quot;&gt;Import a Package in Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;This tutorial walks you through how to install and import python packages&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Be able to install a Python package using terminal.&lt;/li&gt;
+    &lt;li&gt;Be able to explain what a package is in Python.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;You will also need to have the earth-analytics-python environment set up. Instructions for setting here: &lt;a href=&quot;/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-conda-earth-analytics-env&quot;&gt;Set up earth analytics python environment&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Information below is adapted from materials developed by &lt;a href=&quot;https://conda.io/docs/user-guide/tasks/manage-pkgs.html&quot;&gt;Conda Documentation&lt;/a&gt; on managing packages.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-package&quot;&gt;What is a Package?&lt;/h2&gt;
+
+&lt;p&gt;A package, in Python is a bundle of pre-built functionality. You can think of a package like a toolbox filled with tools. The tools in the toolbox can be compared to functions in Python. Except when working with Python, the tools, do things like calculate a mathematical function like a sum or create a plot. There are many different packages available for python. Some of these are optimized for scientific applications including:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Statistics&lt;/li&gt;
+  &lt;li&gt;Machine learning&lt;/li&gt;
+  &lt;li&gt;Using geospatial data&lt;/li&gt;
+  &lt;li&gt;Visualizing data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;where-to-get-python-packages&quot;&gt;Where To Get Python Packages&lt;/h2&gt;
+
+&lt;p&gt;There are many different repositories where Python libraries are maintained and can be installed from. When installing libraries on your computer or in an online environment, it is important to consider where the library is maintained.&lt;/p&gt;
+
+&lt;p&gt;There are three main python package repositories to download python libraries from:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Conda: this is the default repository that is used and maintained for the Anaconda distribution of Python. To install libraries from conda, you use the syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install&lt;/code&gt; at the command line..&lt;/li&gt;
+  &lt;li&gt;Conda-forge: Conda-forge is community maintained. We have found that  installing many of the spatial libraries using conda-forge will minimize library conflicts.&lt;/li&gt;
+  &lt;li&gt;Pip - Python Package Index (pip) is another way to install python packages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+Sometimes python libraries are on github. You can install python libraries from github using &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install git+git://github.com/path-to-github-user/repo-name.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s often good practice to download as many packages as possible from the same repository. For example is you use pip to install geopandas and then try to install shapely from conda-forge, the odds of conflicts often increase. When you encounter these conflicts, often you will not be able to load the libraries and start coding. Conflicts between package dependencies can thus be frustrating when all you want to do is start coding and instead you need to figure out how to properly install a library.&lt;/p&gt;
+
+&lt;p&gt;For consistency, in this course you will download most  libraries from the &lt;strong&gt;conda-forge&lt;/strong&gt; repository.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-a-package-in-a-python-environment&quot;&gt;Install a Package In a Python Environment&lt;/h3&gt;
+
+&lt;p&gt;You can add as many packages as you want to a Python environment. However, it is important to keep track of what environment you are adding the package to. If you add a the geopandas python package to your root python environment and then try to use geopandas in another environment, it won’t work!&lt;/p&gt;
+
+&lt;p&gt;To add a package you need to complete the following steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open a terminal so you have access to the command line.&lt;/li&gt;
+  &lt;li&gt;Activate the python environment that you wish to add the package to.&lt;/li&gt;
+  &lt;li&gt;Install the package that you want to add to that environment&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note, the example code below assumes that you have already setup the earth-analytics-python environment. The code below will activate that environment and then add the &lt;code class=&quot;highlighter-rouge&quot;&gt;statsmodels&lt;/code&gt; library to it. 
+Note that you are using conda to install statsmodels in this example.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Source activate earth-analytics-python
+Conda install conda-forge statsmodels
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that you can also install a library to an environment directly using the –name argument.  To install a specific library such as SciPy into an existing environment “myenv” you’d use the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+conda install conda-forge &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; myenv SciPy
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To install the scipy library to the earth-analytics-python environment, you’d use the code below:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Conda install conda-forge  &lt;span class=&quot;nt&quot;&gt;--earth-analytics-python&lt;/span&gt; scipy
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Following the examples above, if you do not either specify the environment name, OR activate the environment that you wish to install the package to, then the package installs into the current, active environment. The code below will install a package into the currently active environment&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+conda install conda-forge bokeh
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the example below, you use conda rather than conda-forge to install a package:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;activate earth-analytics-python
+conda install packagename
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;view-list-of-all-installed-packages-in-an-environment&quot;&gt;View List of All Installed Packages in an Environment&lt;/h3&gt;
+
+&lt;p&gt;Sometimes you want to view all of the packages installed in a particular environment. To see the installed packages in the activate environment in the terminal type:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+conda list
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Conda list will show you:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;What packages are installed&lt;/li&gt;
+  &lt;li&gt;What version of each package is installed&lt;/li&gt;
+  &lt;li&gt;Where you installed each package from (pip, conda, conda-forge)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;IMPORTANT: note that when you run &lt;code class=&quot;highlighter-rouge&quot;&gt;conda list&lt;/code&gt; it’s listing libraries installed in the current active environment.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(earth-analytics-python)~ username $ conda list
+# packages in environment at //anaconda/envs/earth-analytics-python:
+#
+affine                    2.1.0                      py_1    conda-forge
+alembic                   0.9.7                     &amp;lt;pip&amp;gt;
+altair                    1.2.1                      py_0    conda-forge
+appnope                   0.1.0                    py36_0    conda-forge
+asn1crypto                0.22.0                   py36_0    conda-forge
+attrs                     17.4.0                     py_0    conda-forge
+backports                 1.0                      py36_1    conda-forge
+backports.functools_lru_cache 1.4                      py36_1    conda-forge
+blas                      1.1                    openblas    conda-forge
+bleach                    2.0.0                    py36_0    conda-forge
+boost                     1.65.1                   py36_0    conda-forge
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;import-a-package-in-python&quot;&gt;Import a Package in Python&lt;/h2&gt;
+&lt;p&gt;Once you have installed the packages that you require,you can call them in python at the command line, in a script or in a Jupyter notebook. You have to explicitly call and load each library that you need in your notebook or script in order for the functions (or tools) in the library to be available in your code. 
+Reproducibility Tip: IMPORTANT: Load all of the packages that you will need in the first code cell of a Jupyter notebook. By doing this, you or anyone using your Notebook will know what libraries they need to install in order to run your Notebook.&lt;/p&gt;
+
+&lt;p&gt;Once the package is loaded you can use it in your code. Like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy
+numpy.sin(0)
+0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Import _____ (name of package)&lt;/p&gt;
+
+&lt;h3 id=&quot;package-shortcuts&quot;&gt;Package Shortcuts&lt;/h3&gt;
+&lt;p&gt;In the example above, sin function was called using the full python library name numpy.sin. Doing this over and over will make your code more verbose. Thus you will often see abbreviations used to call functions within a specific package. The syntax to create an library abbreviation is:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;import _____ (name of package) as ____&lt;/code&gt;
+Using the example above, let’s now create an abbreviation for the numpy package. It’s common to use &lt;code class=&quot;highlighter-rouge&quot;&gt;np&lt;/code&gt; for numpy:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+numpy.sin(0)
+0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/import-package.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/import-package.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook with a rendered markdown cell. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;import-libraries-at-the-top-of-your-script&quot;&gt;Import Libraries at the Top of Your Script&lt;/h3&gt;
+
+&lt;p&gt;It is good practice to import all of the packages that you will need to run code in your notebook in the first code cell in a Jupyter notebook. This allows anyone looking at your code - to immediately know what packages they need to run the code. To import a package you use the &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; function. Your notebook will then look like this:&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/import_packages-first-cell.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/import_packages-first-cell.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook with the first cell importing the package numpy to be used with the abbreviations.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Once you have imported all of the packages that you need in your code, you have access to all of the functions contained within each library. An example of the functions available in numpy package is below
+np.() And hit the tab key and then a list of callable functions will appear.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/tab-complete.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/tab-complete.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook with the first cell importing the package numpy to be used with the abbreviations.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">This tutorial walks you through how to install and import python packages.</summary></entry><entry><title type="html">Introduction to Markdown</title><link href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/" rel="alternate" type="text/html" title="Introduction to Markdown" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/os-04-jupyter-notebook</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#about-jupyter-notebook&quot; id=&quot;markdown-toc-about-jupyter-notebook&quot;&gt;About Jupyter Notebook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#advantages-of-jupyter-notebook&quot; id=&quot;markdown-toc-advantages-of-jupyter-notebook&quot;&gt;Advantages of Jupyter Notebook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#get-to-know-jupyter-notebook&quot; id=&quot;markdown-toc-get-to-know-jupyter-notebook&quot;&gt;Get to Know Jupyter Notebook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#additional-resources&quot; id=&quot;markdown-toc-additional-resources&quot;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;This tutorial walks you through the Jupyter notebook interface.&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Be able to open Jupyter notebook from the terminal,&lt;/li&gt;
+    &lt;li&gt;Be able to write and run Python code and markdown in the Jupyter notebook,&lt;/li&gt;
+    &lt;li&gt;Be able to add and run markdown text to a Jupyter notebook&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;You will need to have Git, Bash, and Anaconda setup on your computer to complete this lesson. Instructions for setting up are here: &lt;a href=&quot;/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/&quot;&gt;Setup Git/Bash and Anaconda lesson lesson&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;You will also need to have the earth-analytics-python environment set up. Instructions for setting here: &lt;a href=&quot;/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-conda-earth-analytics-env&quot;&gt;Set up earth analytics python environment&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;You will need to have completed the &lt;a href=&quot;/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/introduction-to-bash-shell/&quot;&gt;Introduction to Bash Shell lesson&lt;/a&gt;.&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Information below is adapted from materials developed by: &lt;a href=&quot;http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb&quot;&gt;Jupyter&lt;/a&gt;, &lt;a href=&quot;https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook#WhatIs&quot;&gt;Datacamp&lt;/a&gt;, and &lt;a href=&quot;https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/&quot;&gt;Dataquest&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-jupyter-notebook&quot;&gt;About Jupyter Notebook&lt;/h2&gt;
+
+&lt;p&gt;Jupyter Notebooks supports a more reproducible workflow. They allow you to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Write and run inline code interactively&lt;/li&gt;
+  &lt;li&gt;Share your work with colleagues so they can see both your code and the code outputs.&lt;/li&gt;
+  &lt;li&gt;Document all aspects of your workflow using a combination of well written code and markdown text.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;advantages-of-jupyter-notebook&quot;&gt;Advantages of Jupyter Notebook&lt;/h2&gt;
+
+&lt;p&gt;Jupyter notebooks also make coding more efficient.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Shortcuts&lt;/strong&gt;: Jupyter notebook have different shortcuts for running cells, adding new cells and formatting the notebook to help save you time&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Autocomplete&lt;/strong&gt; : Autocomplete is available to quickly find function names, arguments for those functions and variables that are stored in your environment. This makes typing easier and less error-prone. Hitting tab while typing will prompt  Jupyter to help you complete the name of a function or variable that you want to call.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Markdown Integration&lt;/strong&gt;: You can combine text and code in the same document. This allows you to explain the code you’ve written, and  make your workflow more reproducible.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;get-to-know-jupyter-notebook&quot;&gt;Get to Know Jupyter Notebook&lt;/h2&gt;
+
+&lt;p&gt;Next, you will explore &lt;a href=&quot;http://jupyter.org/index.html&quot;&gt;Jupyter Notebook&lt;/a&gt;, the Integrated Development Environment (IDE) that you will use to write code, navigate files on our computer, inspect variables and more. An IDE is different from a text editor. IDEs allow you to write, test, and debug code. Other commonly used Python IDEs are Spyder (which comes with the Python Anaconda distribution), and PyCharm. There are many tools to help you code, but in this class you will focus on using Jupyter Notebooks. 
+Jupyter Notebooks is open source product and free under the &lt;a href=&quot;https://github.com/jupyter/jupyter/blob/master/LICENSE&quot;&gt;BSD 3-clause “New” or “Revised” License&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-start-jupyter-notebook&quot;&gt;How to Start Jupyter Notebook&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Launch via the terminal (by typing jupyter notebook), make sure you are in the earth-analytics directory and that the earth-analytics-python environment is activated.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;activate earth-analytics-python 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;earth-analytics 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jupyter notebook 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;jupyter-notebooks-combine-three-components&quot;&gt;Jupyter Notebooks combine three components:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Jupyter Notebook&lt;/strong&gt; The Jupyter Notebook is a web application that launches in a web browser like firefox or safari. The notebook is where you write and run your code.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Kernels&lt;/strong&gt; A kernel is the program that runs your code. So for instance if you have &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; on your computer and want to run R code, you’d use an R kernel. If you want to run Python, then you’ll run a Python kernel in Jupyter notebooks. The kernel runs your code in a given language and returns output back to the notebook web application. Jupyter notebook supports over 40 different kernel languages. In this class, you will use Python. Specifically you will use the earth-analytics-python kernel which contains all of the libraries that you need for this course.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Notebook documents&lt;/strong&gt; The notebook document is the file that you use to store your code and markdown. Each Jupyter Notebook file has an &lt;code class=&quot;highlighter-rouge&quot;&gt;.ipynb&lt;/code&gt; extension.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/sample-jupyter-nb.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/sample-jupyter-nb.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Sample Jupyter Notebook from Jupyter documentation indicating the location of the toolbar, menu bar, cell in command mode, and kernel indicator. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;When you first start the Jupyter Notebook server, your browser will open to the notebook dashboard.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/nb-dashboard.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/nb-dashboard.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter notebook dashboard with one notebook called week1 and a data folder
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The dashboard serves as a homepage for the notebook. Its main purpose is to display the notebooks and files in the current directory. For this class, you will always work in the &lt;a href=&quot;/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/introduction-to-bash-shell/&quot;&gt;earth-analytics directory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;explore-the-jupyter-notebook-interface&quot;&gt;Explore the Jupyter Notebook Interface&lt;/h4&gt;
+
+&lt;p&gt;When  you open or create a new Notebook you will see three main parts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Menu&lt;/li&gt;
+  &lt;li&gt;Toolbar&lt;/li&gt;
+  &lt;li&gt;Notebook Area and Cells&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;work-with-markdown-and-code-cells-in-jupyter-notebooks&quot;&gt;Work With Markdown and Code Cells in Jupyter Notebooks&lt;/h3&gt;
+
+&lt;p&gt;A jupyter notebook consists of a set of cells that can store text or code. You will focus on code and markdown cells for this lesson.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Text Cells: Text cells allow you to write markdown.This is where you will describe your workflow.&lt;/li&gt;
+  &lt;li&gt;Code Cells: Allow you to write code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/select-code-cell.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/select-code-cell.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; You can change the type of any cell using the drop down. Cell type options including:  code, markdown, Raw NBConvert, and heading. There are also shortcut to enter the command mode to use shortcuts hit the esc key. After to change a cell to markdown hit the “m” key or to change a cell to code hit the “y” key. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;For a full list of keyboard shortcuts click the help button then the keyboard shortcuts button.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/help-jupyter.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/help-jupyter.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook help menu. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;markdown-cells-in-jupyter&quot;&gt;Markdown Cells in Jupyter&lt;/h3&gt;
+
+&lt;p&gt;A Jupyter notebook contain text written using the markdown syntax, in a cell that is specified for markdown.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/md-cell.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/md-cell.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook with a non-rendered markdown cell. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/rendered-md-cell.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/rendered-md-cell.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook with a rendered markdown cell. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;code-cells-in-jupyter-notebooks&quot;&gt;Code Cells in Jupyter Notebooks&lt;/h3&gt;
+
+&lt;p&gt;You can add code to the code cells in Jupyter Notebooks. Code is written in code chunks. When you run the code in a cell, the code output displayed below. A cell can be run by hitting the run button or using a keyboard shortcut, as discussed in the next section.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/basic-code-cell.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/basic-code-cell.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook with a code cell that contains 4 + 5. When you run the code, the output is 9 and is displayed below the code cell. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;For more information on code in Jupyter Notebooks is in the next lesson &lt;a href=&quot;/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages&quot;&gt;Install and Import Python Packages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;useful-jupyter-shortcuts-for-running-code-and-adding-cells&quot;&gt;Useful Jupyter Shortcuts For Running Code and Adding Cells&lt;/h3&gt;
+
+&lt;h4 id=&quot;menu-tools-vs-keyboard-shortcuts&quot;&gt;Menu Tools vs. Keyboard Shortcuts&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can manipulate your Jupyter Notebook using the drop down tools from the menu, with keyboard shortcuts, or using both.&lt;/li&gt;
+  &lt;li&gt;Keyboard shortcuts allow your workflow to be faster and more efficient.&lt;/li&gt;
+  &lt;li&gt;The most important keyboard shortcuts are Enter, which enters edit mode, and Esc, which enters command mode.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Enter Mode&lt;/strong&gt; is indicated  by green around cells and is for editing the contents of a cell&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Command Mode&lt;/strong&gt; is indicated by a grey cell border with blue on the left edge. This mode allows you to edit the notebook as a whole.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The table below shows common tasks in Jupyter and how to do them using keyboard shortcuts or the menu tool.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Function&lt;/th&gt;
+      &lt;th&gt;Keyboard Shortcut&lt;/th&gt;
+      &lt;th&gt;Menu Tools&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Save notebook&lt;/td&gt;
+      &lt;td&gt;Esc + s&lt;/td&gt;
+      &lt;td&gt;File → Save and Checkpoint&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Create new cell&lt;/td&gt;
+      &lt;td&gt;Esc + a (above), Esc + b (below)&lt;/td&gt;
+      &lt;td&gt;Insert→ cell above Insert → cell below&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Run Cell&lt;/td&gt;
+      &lt;td&gt;Ctrl + enter&lt;/td&gt;
+      &lt;td&gt;Cell → Run Cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Copy Cell&lt;/td&gt;
+      &lt;td&gt;c&lt;/td&gt;
+      &lt;td&gt;Copy Key&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Paste Cell&lt;/td&gt;
+      &lt;td&gt;v&lt;/td&gt;
+      &lt;td&gt;Paste Key&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Interrupt Kernel&lt;/td&gt;
+      &lt;td&gt;Esc + i i&lt;/td&gt;
+      &lt;td&gt;Kernel → Interrupt&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Restart Kernel&lt;/td&gt;
+      &lt;td&gt;Esc + 0 0&lt;/td&gt;
+      &lt;td&gt;Kernel → Restart&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Find and replace on your code but not the outputs&lt;/td&gt;
+      &lt;td&gt;Esc + f&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;merge multiple cells&lt;/td&gt;
+      &lt;td&gt;Shift + M&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;When placed before a function Information about a function from its documentation&lt;/td&gt;
+      &lt;td&gt;?&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+Inline magic are commands built into the python kernel and always start with a %. Magic commands are useful shortcuts. Magic commands always start with a % because this symbol isn’t valid in Python. Magic commands also only work on the ipython kernel. Magic commands provide shortcuts to common tasks that would normally take several lines of code to accomplish in Python.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Magic&lt;/th&gt;
+      &lt;th&gt;What it does&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;%writefile&lt;/td&gt;
+      &lt;td&gt;Saves the contents of a cell to an external file&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;%timeit&lt;/td&gt;
+      &lt;td&gt;Shows how long it takes a cell of code to run&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;%who&lt;/td&gt;
+      &lt;td&gt;List all variables of a global scope&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;%store&lt;/td&gt;
+      &lt;td&gt;Pass variables between notebooks&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;%load&lt;/td&gt;
+      &lt;td&gt;Insert code from an external script&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;notice--info&quot;&gt;
+
+  &lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://unidata.github.io/online-python-training/introduction.html&quot; target=&quot;_blank&quot;&gt;More Jupyter Notebook Overview Material&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">This tutorial walks you through the Jupyter notebook interface.</summary></entry><entry><title type="html">Introduction to Markdown</title><link href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/" rel="alternate" type="text/html" title="Introduction to Markdown" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/os-03-intro-to-markdown</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#markdown&quot; id=&quot;markdown-toc-markdown&quot;&gt;Markdown&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#get-to-know-the-markdown-syntax&quot; id=&quot;markdown-toc-get-to-know-the-markdown-syntax&quot;&gt;Get to Know the Markdown Syntax&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-two&quot; id=&quot;markdown-toc-heading-two&quot;&gt;Heading two&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#additional-resources&quot; id=&quot;markdown-toc-additional-resources&quot;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;This tutorial walks you through how to format text using markdown&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Define what the markdown syntax is&lt;/li&gt;
+    &lt;li&gt;Create  a heading 1, 2 or 3 using Markdown syntax&lt;/li&gt;
+    &lt;li&gt;Italicize and bold text using Markdown&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;markdown&quot;&gt;Markdown&lt;/h2&gt;
+
+&lt;p&gt;Markdown is a human readable syntax for formatting text documents. Markdown can be used to produce nicely formatted documents including pdf’s and web pages. When you format text using markdown in a document, it is similar to using the format tools (bold, heading 1, heading 2, etc) in a word processing tool like Microsoft Word of Google Docs. However instead of using buttons to apply formatting, you use syntax such as &lt;code class=&quot;highlighter-rouge&quot;&gt;**this bolds text in markdown**&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;# Here is a heading&lt;/code&gt;.Markdown allows you to format text - such as making headings, italics, bold, bulleted list, add links, format mathematical symbols and , make tables ect.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+Learn more about &lt;a href=&quot;http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html&quot;&gt;markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;markdown-syntax-in-jupyter-notebook-files&quot;&gt;Markdown Syntax in Jupyter Notebook files&lt;/h3&gt;
+
+&lt;p&gt;Jupyter notebooks allow you to combine code and Markdown in one document. A Jupyter notebook can contain text written using the markdown syntax, in a cell that is specified for markdown.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/md-cell.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/md-cell.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Jupyter Notebook with a markdown cell.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The text that you add to a Jupyter notebook using Markdown can serve many different purposes. It could be used to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Document your workflow: You may add text to the document that describes the steps that you incorporated into your processing workflow&lt;/li&gt;
+  &lt;li&gt;Describe your data:It could describe the data that you are using, how it’s being processed and what the outputs are.&lt;/li&gt;
+  &lt;li&gt;Interpret code outputs: You may even add some text that interprets or discusses the outputs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you render your document to HTML or pdf) this markdown will appear as text on the output document.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+This web page that you are reading right now is generated from a markdown document. In this tutorial, we cover the basic syntax of markdown.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-to-know-the-markdown-syntax&quot;&gt;Get to Know the Markdown Syntax&lt;/h2&gt;
+
+&lt;p&gt;Markdown is simple plain text, that is styled using special characters, including:&lt;/p&gt;
+
+&lt;p&gt;#: a header element&lt;/p&gt;
+
+&lt;p&gt;**: bold text&lt;/p&gt;
+
+&lt;p&gt;*: italic text&lt;/p&gt;
+
+&lt;p&gt;` : code blocks&lt;/p&gt;
+
+&lt;p&gt;Let’s review some basic markdown syntax&lt;/p&gt;
+
+&lt;h3 id=&quot;paragraph-text&quot;&gt;Paragraph Text&lt;/h3&gt;
+
+&lt;p&gt;When you type text in a markdown document with no additional syntax, the text
+will appear as paragraph text. You can add additional syntax to that text
+to format it in different ways.&lt;/p&gt;
+
+&lt;p&gt;For example, if you want to highlight a function or some code within a plain text
+paragraph, we can use one backtick on each side of the text ( &lt;code&gt;`code-goes-here`&lt;/code&gt; ),
+like this: &lt;code&gt;`Here is some code`&lt;/code&gt;. This is the backtick, or grave; not
+an apostrophe (on most US keyboards it is on the same key as the tilde (~)).&lt;/p&gt;
+
+&lt;p&gt;To add emphasis to other text you can use &lt;strong&gt;bold&lt;/strong&gt; or &lt;em&gt;italics&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Have a look at the markdown below:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The use of the highlight ( `text` ) will be reserved for denoting code.
+To add emphasis to other text use **bold** or *italics*.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice that this sentence uses both a code highlight “``”, bold and italics.
+As a rendered markdown chunk, it looks like this:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The use of the highlight ( &lt;code class=&quot;highlighter-rouge&quot;&gt;text&lt;/code&gt; ) will be reserve for denoting code when
+used in text. To add emphasis to other text use &lt;strong&gt;bold&lt;/strong&gt; or &lt;em&gt;italics&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;horizontal-lines-rules&quot;&gt;Horizontal Lines (rules)&lt;/h3&gt;
+
+&lt;p&gt;Create a rule:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ***
+
+
+  ***
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;here-is-rendered-markdown&quot;&gt;Here is rendered markdown:&lt;/h3&gt;
+
+&lt;p&gt;Section Headings
+We create a heading using the pound (#) sign. For the headers to render
+properly there must be a space between the # and the header text.
+Heading one is 1 # sign, heading two is 2 ## signs, etc as follows:&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-two&quot;&gt;Heading two&lt;/h2&gt;
+
+&lt;h3 id=&quot;heading-three&quot;&gt;Heading three&lt;/h3&gt;
+
+&lt;h4 id=&quot;heading-four&quot;&gt;Heading four&lt;/h4&gt;
+
+&lt;h3 id=&quot;explore-markdown-cells-in-a-jupyter-notebook&quot;&gt;Explore Markdown Cells in a Jupyter Notebook&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello Earth Analytics&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You should now be able to: 
+*define markdown&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;make a heading&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;italicize&lt;/strong&gt; some text&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;explore-markdown-cells-in-a-jupyter-notebook-1&quot;&gt;Explore Markdown Cells in a Jupyter Notebook&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello Earth Analytics&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You should now be able to: 
+*define markdown&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;make a heading&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;italicize&lt;/strong&gt; some text&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check out the markdown cell above. Does any of the markdown syntax look familiar?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Are any words in bold?&lt;/li&gt;
+  &lt;li&gt;Are any words in italics?&lt;/li&gt;
+  &lt;li&gt;Are any words highlighted as code?&lt;/li&gt;
+  &lt;li&gt;Is any of the text in a bulleted list ?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are unsure, the answers are at the bottom of this page.&lt;/p&gt;
+
+&lt;div class=&quot;notice--info&quot;&gt;
+
+  &lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot; target=&quot;_blank&quot;&gt;GitHub Guide on Markdown&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html&quot; target=&quot;_blank&quot;&gt; Jupyter Notebook Markdown Resources&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Answers to the Default Text Markdown Syntax Questions&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Are any words in bold? - Yes, Italicize&lt;/li&gt;
+  &lt;li&gt;Are any words in italics? - No&lt;/li&gt;
+  &lt;li&gt;Are any words highlighted as code? - Yes (print “Earth Analytics Python”)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">This tutorial walks you through how to format text using markdown.</summary></entry><entry><title type="html">File Organization Tips</title><link href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/" rel="alternate" type="text/html" title="File Organization Tips" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/os-02-file-organization-101</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#characteristics-of-a-well-structured-project--working-directory&quot; id=&quot;markdown-toc-characteristics-of-a-well-structured-project--working-directory&quot;&gt;Characteristics of a Well Structured Project / Working Directory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;In this lesson you will learn about file organization to make your own future life easier (so you can find things) and also to make it easier to collaborate with other people.&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Be able to describe the key characteristics of a well structured project.&lt;/li&gt;
+    &lt;li&gt;Be able to summarize in 1-3 sentences why good project structure can make your work more efficient and make it easier to collaborate with colleagues.&lt;/li&gt;
+    &lt;li&gt;Be able to explain what a working directory is.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+  &lt;p&gt;be sure that you have Python and  the earth analytics python environment installed on your computer.  You should also have an &lt;code class=&quot;highlighter-rouge&quot;&gt;earth-analytics&lt;/code&gt; directory setup on your computer with a &lt;code class=&quot;highlighter-rouge&quot;&gt;/data&lt;/code&gt; directory with it&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;characteristics-of-a-well-structured-project--working-directory&quot;&gt;Characteristics of a Well Structured Project / Working Directory&lt;/h2&gt;
+&lt;p&gt;Please note that in this lesson, we will be using our project directory as our working directory. Thus these terms will be used intechangably throughout.&lt;/p&gt;
+
+&lt;h3 id=&quot;organization---files--directories&quot;&gt;Organization - Files &amp;amp; Directories&lt;/h3&gt;
+&lt;p&gt;When it comes to structuring the names of the files and folders that create your project, the more self explanatory, the better. A well structured project directory should:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Utilize a naming convention that is:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Human readable&lt;/strong&gt; - use directory names that are easy to understand.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Machine readable&lt;/strong&gt; - avoid funky characters OR SPACES.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Support sorting&lt;/strong&gt; - If you have a list of input files, it’s nice to be able to sort them to quickly see what’s there and find What you need.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Preserve raw data so it’s not modified&lt;/strong&gt;: We’ll worry about this later.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Have easy to read directory names that contains components of the project (e.g. code, data, outputs, figures, etc)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;which-filenames-are-most-self-explanatory&quot;&gt;Which Filenames Are Most Self-explanatory?&lt;/h3&gt;
+&lt;p&gt;Your goal when structuring a project directory is to use a naming convention that someone who is not familiar with your project can quickly understand. Case in point, have a look at the graphic below. Which list of file names are the most self explanatory? The ones on the LEFT? Or the ones of the RIGHT? Consider the structure of your project as we build the project or working directory for our earth analytics tutorials in the next lesson.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/setup-python/file-naming.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/setup-python/file-naming.png&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Compare the list of file names on the LEFT to those on the right which ones are easier to quickly understand? Source: Jenny Bryan, Reproducible Science Curriculum.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">This lesson provides a broad overview of file organization principles.</summary></entry><entry><title type="html">Why Open Science</title><link href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/why-open-science/" rel="alternate" type="text/html" title="Why Open Science" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/os-01-why-open-science</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/why-open-science/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#why-open-science&quot; id=&quot;markdown-toc-why-open-science&quot;&gt;Why Open Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#about-jupyter-notebooks&quot; id=&quot;markdown-toc-about-jupyter-notebooks&quot;&gt;About Jupyter Notebooks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;In this lesson you will learn how the importance of open science and how to use Jupyter Notebooks for reproducible work.&lt;/p&gt;
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;List benefits of using Jupyter Notebooks to create reports.&lt;/li&gt;
+    &lt;li&gt;Explain how Jupyter Notebooks are a useful tool in Open Science approaches.&lt;/li&gt;
+    &lt;li&gt;Explain one way that Jupyter Notebooks can benefit your research.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What you need&lt;/h2&gt;
+  &lt;p&gt;be sure that you have Python and  the earth analytics python environment installed on your computer.  You should also have an &lt;code class=&quot;highlighter-rouge&quot;&gt;earth-analytics&lt;/code&gt; directory setup on your computer with a &lt;code class=&quot;highlighter-rouge&quot;&gt;/data&lt;/code&gt; directory with it&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;why-open-science&quot;&gt;Why Open Science&lt;/h2&gt;
+&lt;p&gt;Open science in a nutshell is about making scientific methods, data and outcomes
+available to everyone. It can be broken down into several parts (&lt;a href=&quot;http://www.openscience.org/blog/?p=269&quot;&gt;Gezelter 2009)&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Transparency in experimental methodology, observation, and collection of data.&lt;/li&gt;
+  &lt;li&gt;Public availability and reusability of scientific data.&lt;/li&gt;
+  &lt;li&gt;Public accessibility and transparency of scientific communication.&lt;/li&gt;
+  &lt;li&gt;Using web-based tools to facilitate scientific collaboration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this tutorial, you are not going to focus on all aspects of open science as listed above. However, you will be introduce one tool that can be used to make our workflows:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;More transparent and&lt;/li&gt;
+  &lt;li&gt;More available and accessible to the public and our colleagues.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In this tutorial, you will learn how to document your work - by connecting data,
+methods and outputs in one or more reports or documents. You will learn about Jupyter Notebooks as a tool to make your work more open and reproducible. Jupyter notebooks allow you to connect data, code (methods used to process the data) and outputs. Jupyter Notebooks can be saved and shared in different formats such as  html or pdf.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-science-slide-show&quot;&gt;Open Science Slide Show&lt;/h3&gt;
+
+&lt;p&gt;Click through the slideshow below to learn more about open science.
+&lt;a class=&quot;btn btn-info&quot; href=&quot;/slide-shows/share-publish-archive/&quot; target=&quot;_blank&quot;&gt;
+View Slideshow: Share, Publish &amp;amp; Archive Code &amp;amp; Data &lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;about-jupyter-notebooks&quot;&gt;About Jupyter Notebooks&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;.ipynb&lt;/code&gt; file format allows you to combine descriptive text, code blocks and code output. You can run the code in python and you can export the .ipynb file to a nicely rendered, shareable format like &lt;code class=&quot;highlighter-rouge&quot;&gt;.pdf&lt;/code&gt; or html. When render your file to &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; or pdf the code is run and so your code outputs including plots, and other figures appear in the rendered document. You will use Jupyter Notebooks (.ipynb files) to document workflows and to share data processing, analysis and visualization code &amp;amp; outputs.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-combine-markdown-and-code-in-jupyter-notebooks&quot;&gt;Why Combine Markdown and Code in Jupyter Notebooks&lt;/h3&gt;
+
+&lt;p&gt;Mixing markdown with code in Jupyter Notebooks provides many advantages:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Human readable: it’s much easier to read a web page or a report containing text and figures.By adding markdown or text around your code, your project becomes more user friendly and easier to understand.&lt;/li&gt;
+  &lt;li&gt;Simple syntax: markdown is a simple language to learn and can be learned quickly. This makes the learning curve for well-documented Jupyter Notebooks smaller.&lt;/li&gt;
+  &lt;li&gt;Helpful Reminder for Your Future Self: When you code, consider your future self. If you leave your future self a well documented set of jupyter notebooks that both run your code and describe the steps, then all components of your work are clearly documented. You and your future self then don’t have to remember what steps, assumptions, tests were used to complete the workflow.&lt;/li&gt;
+  &lt;li&gt;Easy to Modify: You can easily extend or refine analyses contained within a Jupyter notebook by modifying existing or adding new code blocks.&lt;/li&gt;
+  &lt;li&gt;Flexible export formats: Analysis results stored in Notebooks can be disseminated in various formats including HTML, PDF and slideshows.&lt;/li&gt;
+  &lt;li&gt;Easy to share: If all of your analysis is contained and described in a one or more notebooks, it makes it easy to share with a colleague. Your colleague can also easily replicate your workflow.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+You can easily create fully reproducible jupyter notebooks that can be run online using &lt;a href=&quot;https://mybinder.org/&quot;&gt;my binder&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;jupyter-notebooks-are-beneficial-to-your-colleagues&quot;&gt;Jupyter Notebooks are beneficial to your colleagues&lt;/h3&gt;
+
+&lt;p&gt;The link between data, code and results makes Jupyter Notebooks powerful. You can share your entire workflow with your colleagues and they can quickly see your process. You can also write reports using .ipynb files which contain code and data analysis results. To enrich the document, you can add text, just like you would in a word document that describes your workflow, discusses your results and presents your conclusions - along side your analysis results.&lt;/p&gt;
+
+&lt;h3 id=&quot;jupyter-notebooks-are-beneficial-to-you--your-future-self&quot;&gt;Jupyter Notebooks are beneficial to you &amp;amp; your future self&lt;/h3&gt;
+
+&lt;p&gt;Jupyter notebooks (.ipynb) as a format is an efficient tool. If you need to make changes to your workflow, you can simply modify the report and re-render the report.This creates an efficient workflow. Your future self will appreciate it too. Jupyter Notebook provides documentation for you to see what code you used to create a figure or to analyze the data.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i fa=&quot;&quot; fa-star=&quot;&quot;&gt;&lt;/i&gt;&lt;strong&gt;Data Tip:&lt;/strong&gt;
+Many of the Earth Lab lessons, including this one, were created using Jupyter Notebooks!&lt;/p&gt;
+
+&lt;h3 id=&quot;use-convert-ipynb-to-html&quot;&gt;Use convert .ipynb to .html&lt;/h3&gt;
+&lt;p&gt;You can save Jupyter Notebooks containing code and markdown as .html files. When you save a notebook as .html, it creates a nicely rendered web page with the code and outputs visible along with the markdown rendered as nicely formatted text. You will learn how how to save to .html and other formats later in this course.&lt;/p&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">This tutorial walks you through the importance of open science and how to use Jupyter Notebooks for reproducible work.</summary></entry><entry><title type="html">Explore Precipitation and Stream Flow Data Using Interactive Plots: The 2013 Colorado Floods</title><link href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/" rel="alternate" type="text/html" title="Explore Precipitation and Stream Flow Data Using Interactive Plots: The 2013 Colorado Floods" /><published>2018-02-05T00:00:00-07:00</published><updated>2018-02-05T00:00:00-07:00</updated><id>http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/flood-03-precip-discharge-data</id><content type="html" xml:base="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; In This Lesson&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#learning-objectives&quot; id=&quot;markdown-toc-learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-you-need&quot; id=&quot;markdown-toc-what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What You Need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#exploring-flood-damage&quot; id=&quot;markdown-toc-exploring-flood-damage&quot;&gt;Exploring Flood Damage&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#precipitation&quot; id=&quot;markdown-toc-precipitation&quot;&gt;Precipitation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#activity-precip-data&quot; id=&quot;markdown-toc-activity-precip-data&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Activity: Precip Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stream-flow-discharge&quot; id=&quot;markdown-toc-stream-flow-discharge&quot;&gt;Stream Flow (Discharge)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#activity-stream-discharge-data&quot; id=&quot;markdown-toc-activity-stream-discharge-data&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Activity: Stream Discharge Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#activity-driver--impact-diagrams&quot; id=&quot;markdown-toc-activity-driver--impact-diagrams&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Activity: Driver / Impact Diagrams&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;In this classroom activity you will look at different types of data
+that scientifically quantify / document the drivers (causes of) and impacts of
+a disturbance event like a flood.&lt;/p&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;h2 id=&quot;learning-objectives&quot;&gt;&lt;i class=&quot;fa fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Learning Objectives&lt;/h2&gt;
+  &lt;p&gt;At the end of this activity, you will be able to:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Describe two related drivers of a flood event.&lt;/li&gt;
+    &lt;li&gt;Interpret plots containing time series data related to flood drivers.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;what-you-need&quot;&gt;&lt;i class=&quot;fa fa-check-square-o fa-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; What You Need&lt;/h2&gt;
+
+  &lt;p&gt;You need a computer with internet to complete this lesson.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;exploring-flood-damage&quot;&gt;Exploring Flood Damage&lt;/h2&gt;
+
+&lt;p&gt;In the previous lesson, you:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Looked at visible damage caused by the 2013 floods using Google Earth imagery.&lt;/li&gt;
+  &lt;li&gt;Explored an extremely well written report on the floods identifying things that may make the report better.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In this lesson you will explore two of the  drivers of the flood and
+associated flood impacts. A &lt;strong&gt;driver&lt;/strong&gt; is a cause of a disturbance events.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;http://localhost:4000/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png&quot; alt=&quot;North St Vrain before and after 2013 flood.&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; The St. Vrain River in Boulder County, CO after (left) and before
+ (right) the 2013 flooding event.  Source: Boulder County via &lt;a href=&quot;http://krcc.org/post/post-flood-planning-boulder-county&quot; target=&quot;_blank&quot;&gt; KRCC&lt;/a&gt;.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;precipitation&quot;&gt;Precipitation&lt;/h2&gt;
+
+&lt;p&gt;Examine the plots below. Think about what the data may or may not be telling you.
+Then answer the questions below.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt; &lt;strong&gt;Precipitation:&lt;/strong&gt; is the moisture that
+falls from clouds including rain, hail and snow.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;https://plot.ly/~NEONDataSkills/6/total-monthly-precipitation-boulder-co-station/&quot; target=&quot;_blank&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png&quot; alt=&quot;North St Vrain before and after 2013 flood.&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; Total Monthly Precipitation. Click on the image to EXPLORE the data interactively! Data Source: NOAA &lt;a href=&quot;http://krcc.org/post/post-flood-planning-boulder-county&quot; target=&quot;_blank&quot;&gt; KRCC&lt;/a&gt;.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;//plot.ly/~leahawasser/161.embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;div class=&quot;notice--warning&quot;&gt;
+
+  &lt;h2 id=&quot;activity-precip-data&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Activity: Precip Data&lt;/h2&gt;
+
+  &lt;h3 id=&quot;what-do-the-data-tell-you-about-precipitation-patterns&quot;&gt;What do the data tell you about precipitation patterns?&lt;/h3&gt;
+
+  &lt;p&gt;As a group, discuss the following questions. Record your answers in the
+Google doc that your instructor shared with you for today’s class. As
+you explore the data, keep in mind that the the flood event occured September 2013.&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;What patterns do you observe in the data? Note any data points that appear to be visibly different from the other data points in the plots?
+      &lt;ul&gt;
+        &lt;li&gt;Do you think the differences that you note are statistically significant? Do you have enough information to determine this?&lt;/li&gt;
+        &lt;li&gt;For each difference: What you think caused that difference?&lt;/li&gt;
+        &lt;li&gt;For each difference: How can you quantitatively record the differences?&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;What other factors may have contributed to the patterns that you observe in precipitation? What other data would you like to see to better “tell the story” of what took place during the flood?&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;stream-flow-discharge&quot;&gt;Stream Flow (Discharge)&lt;/h2&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt; &lt;strong&gt;Stream Discharge&lt;/strong&gt;, quantifies the volume of water
+moving down a stream. Discharge is an ideal metric to quantify stream flow, which
+increases significantly during a flood event.&lt;/p&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;https://plot.ly/~leahawasser/166/stream-discharge-boulder-creek-2013/&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/course-materials/earth-analytics/week-1/intro-co-floods/stream-discharge-166.png&quot; alt=&quot;Stream discharge plot.&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; 30 Years of Stream Discharge - Click on the graphic to
+ explore the data interactively.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+ &lt;a href=&quot;https://plot.ly/~leahawasser/150/stream-discharge-boulder-creek-2013/&quot;&gt;
+ &lt;img src=&quot;http://localhost:4000/images/course-materials/earth-analytics/week-1/intro-co-floods/stream-discharge-150.png&quot; alt=&quot;Stream discharge plot.&quot; /&gt;&lt;/a&gt;
+ &lt;figcaption&gt; 2013 Stream Discharge - Boulder Creek 2013 - Click on the graphic to
+ explore the data interactively.
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;notice--warning&quot;&gt;
+
+  &lt;h2 id=&quot;activity-stream-discharge-data&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Activity: Stream Discharge Data&lt;/h2&gt;
+
+  &lt;h3 id=&quot;what-do-the-data-tell-you-about-stream-discharge&quot;&gt;What do the data tell you about stream discharge?&lt;/h3&gt;
+
+  &lt;p&gt;As a group, discuss the following questions. Record your answers in the
+same Google doc that you used above.&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;What differences do you see in stream discharge between 2012 and 2013?
+      &lt;ul&gt;
+        &lt;li&gt;For each difference: What you think caused that difference?&lt;/li&gt;
+        &lt;li&gt;For each difference: How can you quantitatively record the differences?&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;For each CAUSE listed above, could you somehow quantitatively record the magnitude (size or impact) of the cause?&lt;/li&gt;
+    &lt;li&gt;Was the cause - caused by (driven by) something else?&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;notice--warning&quot;&gt;
+
+  &lt;h2 id=&quot;activity-driver--impact-diagrams&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Activity: Driver / Impact Diagrams&lt;/h2&gt;
+
+  &lt;h3 id=&quot;finally--create-a-diagram-that-illustrates-the-drivers-and-impacts-of-a-flood&quot;&gt;Finally – Create a diagram that illustrates the drivers and impacts of a flood&lt;/h3&gt;
+
+  &lt;p&gt;Work with your group to create a diagram of the 2013 floods. In this diagram include
+everything that you think contributed to the flood itself (based on the discussions
+that we had in class and what you know). When you are happy with your diagram,
+create a digital version of it (take a picture using a phone, etc). Then, post your diagram to the piazza discussion board under &lt;strong&gt;week1&lt;/strong&gt;. NOTE: look for the post titled “Week 1: driver / impact diagrams”&lt;/p&gt;
+
+  &lt;p&gt;When everyone has posted - scroll through ALL of the diagrams and “select” the one that you think is best using the &lt;kbd&gt;good note&lt;/kbd&gt; marker at the bottom of that post.&lt;/p&gt;
+
+&lt;/div&gt;</content><author><name>Leah Wasser</name></author><category term="[&quot;courses&quot;]" /><summary type="html">Practice interpreting data on plots that show rainfall (precipitation) and stream flow (discharge) as it changes over time.</summary></entry></feed>

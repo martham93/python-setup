@@ -1,0 +1,124 @@
+<hr />
+<p>layout: archive
+ title: Search
+ permalink: 
+ sitemap: false
+ —</p>
+
+<div class="sidebar notsticky">
+     <nav class="nav__list">
+<ul>
+<li><span class="nav__sub-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Lessons by topic</span>
+ <ul>
+
+  
+  
+  
+  
+  <li><a href="http://localhost:4000/tags/remote-sensing"> <span><i class="fa fa-book" aria-hidden="true"></i> Remote sensing (1)</span></a></li>
+  
+
+  
+  
+  
+  
+  <li><a href="http://localhost:4000/tags/earth-science"> <span><i class="fa fa-book" aria-hidden="true"></i> Earth science (3)</span></a></li>
+  
+
+  
+  
+  
+  
+  <li><a href="http://localhost:4000/tags/open-science"> <span><i class="fa fa-book" aria-hidden="true"></i> Open science (1)</span></a></li>
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <li><a href="http://localhost:4000/tags/time-series"> <span><i class="fa fa-book" aria-hidden="true"></i> Time series (3)</span></a></li>
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <li><a href="http://localhost:4000/tags/reproducible-science-and-programming"> <span><i class="fa fa-book" aria-hidden="true"></i> Reproducible science and programming (8)</span></a></li>
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+    </ul>
+  </li>
+</ul>
+
+<!--
+<ul>
+  <li><span class="nav__sub-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Lessons by coding language</span>
+    <ul>
+      
+        
+
+        
+
+          <li><span><i class="fa fa-book" aria-hidden="true"></i> python: 0 </span></li>
+      
+        
+
+        
+
+          <li><span><i class="fa fa-book" aria-hidden="true"></i> r: 0 </span></li>
+      
+        
+
+        
+
+          <li><span><i class="fa fa-book" aria-hidden="true"></i> javascript: 0 </span></li>
+      
+    </ul>
+  </li>
+</ul>
+-->
+<!-- Turning off the side bar by langage for the time being until we figure out how to implement-->
+</nav>
+
+</div>
+
+<div id="home-search" class="home">
+   <script>
+       (function() {
+           var cx = '[Your CSE Search ID]';
+           var gcse = document.createElement('script');
+           gcse.type = 'text/javascript';
+           gcse.async = true;
+           gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+           '//www.google.com/cse/cse.js?cx=' + cx;
+           var s = document.getElementsByTagName('script')[0];
+           s.parentNode.insertBefore(gcse, s);
+       })();
+   </script>
+   <gcse:search queryParameterName="searchString"></gcse:search>
+</div>

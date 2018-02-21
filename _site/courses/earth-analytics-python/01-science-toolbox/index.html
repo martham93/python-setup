@@ -1,0 +1,961 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+
+<meta charset="utf-8">
+
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Get Started with Data in Python / Jupyter Notebooks - Earth Data Science - Earth Lab</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Earth Data Science - Earth Lab">
+<meta property="og:title" content="Get Started with Data in Python / Jupyter Notebooks">
+
+
+  <link rel="canonical" href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/">
+  <meta property="og:url" content="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/">
+
+
+
+  <meta property="og:description" content="     This Week  ">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2018-02-05T00:00:00-07:00">
+  
+    <link rel="next" href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/google-earth-time-series/" title="Use Google Earth Time Series Images to Explore Flood Impacts">
+  
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Earth Analytics",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Earth Data Science - Earth Lab Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="LfpevjsE0wlELv5KKOZv1T2RhRimGSiRckWv5ZC19GU" />
+<!-- don't use the old cataloged meta tags -->
+<meta name="googlebot" content="noodp">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<!-- search bar begin  - turning off for now-->
+
+<div class="search">
+<form role="search" method="get" action="http://localhost:4000/search/">
+    <input id="q" name="q"
+           placeholder="Search earth data science site" type="text">
+</form>
+</div>
+
+
+<!-- search bar END -->
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Earth Data Science - Earth Lab</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tutorials/">Tutorials</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/courses/">Courses</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tools/">Tools</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/events/">Events</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://www.colorado.edu/earthlab">Earth Lab CU</a></li>
+          
+
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+ <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<a href="http://localhost:4000"></a>
+ 
+   
+   
+     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+       <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+       <meta itemprop="position" content="" />
+     </li>
+     <span class="sep">/</span>
+   
+    
+        <li><a href="http://localhost:4000/courses/">Courses</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/">Earth analytics python</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li class="current">Get Started with Data in Python / Jupyter Notebooks</li>
+    
+  
+</ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+
+    
+     <!--  Might be able to delete this This is the code that populates the side bar navigation if there is a class-->
+      
+
+
+
+
+<!-- make sure we're only grabbing pages for the course -->
+
+
+
+<!--<h3>Week 1 Lessons</h3>-->
+<!-- i don't think the code below is used as modules is defined lower down as well. -->
+
+<!-- This is how modules are sorted on the left hand side bar -->
+
+
+
+
+
+
+<!-- BEGIN commenting this out - this is the old code when only individual module content was on the page vs the entire course-->
+
+
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics/" ><i class="fa fa-home" aria-hidden="true"></i> Earth-analytics-python Home</a></h5>
+
+
+<!-- Just get the pages from this course -->
+
+
+
+
+
+
+<nav class="nav__list">
+
+
+
+
+
+
+<ul>
+  <li><span class="nav__sub-title"><i class="fa fa-book" aria-hidden="true"></i> Units</span>
+   <ul>
+    
+
+    <!-- Only list the week if it's not the week for the current landing page -->
+    
+
+
+      
+       
+      <li> <a href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/" class='active'> <!--<i class="fa fa-folder-open" aria-hidden="true"></i> -->
+         1. GET STARTED WITH DATA IN PYTHON / JUPYTER NOTEBOOKS</a></li>
+        
+
+<div class='active-menu'>
+      <ul>
+        
+        
+
+        
+
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Open science python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/why-open-science/><!--1.1 --> - Why Open Science</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/><!--1.2 --> - File Organization Tips</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/><!--1.3 --> - Intro to Markdown</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/><!--1.4 --> - Intro to Jupyter</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/><!--1.5 --> - Install and Import Packages</a></li>
+          
+          
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Intro setup python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/><!--1.1 --> - Install Git, Bash & Anaconda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/><!--1.2 --> - Bash</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/><!--1.3 --> - Set up Conda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/><!--1.4 --> - Text Editors For Coding</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Use data for science </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/google-earth-time-series/><!--1.1 --> - Google Earth Time Series</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/co-floods-data-example-python/><!--1.2 --> - Data Driven Report</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/><!--1.3 --> - Interactive Data Plots</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+      </ul>
+
+      <!-- BEGIN Learn how to lessons -->
+       <ul>
+         
+         
+       </ul>
+
+
+     </div>
+
+
+      <!-- END BEGIN Learn how to lessons -->
+
+      <!--  -->
+      
+
+    
+  </ul></li>
+ </ul>
+
+
+ <ul>
+   <li><span class="nav__sub-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Overview</span>
+    <ul>
+     
+   </ul>
+ </li>
+</ul>
+</nav>
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics-python/" ><i class="fa fa-home" aria-hidden="true"></i> earth-analytics-python Home</a></h5>
+
+    
+
+    
+
+
+
+  
+  </div>
+
+
+
+
+
+<!-- begin science / science themes side bar nav -->
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <meta itemprop="headline" content="Get Started with Data in Python / Jupyter Notebooks">
+    <meta itemprop="description" content="     This Week  ">
+    <meta itemprop="datePublished" content="February 05, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+        <header>
+          <!-- BEGIN: insert a welcome to the module block on pages that are part of a module set -->
+
+          <!-- END: insert welcome block -->
+          <h1 class="page__title" itemprop="headline">
+            
+             Get Started with Data in Python / Jupyter Notebooks
+ </h1>
+          
+
+          
+
+        <br/>
+
+        
+
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <!-- would like to include the TOC automatically but this does weird things-->
+        
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> This Week</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#welcome-to-week-one" id="markdown-toc-welcome-to-week-one"><i class="fa fa-ship" aria-hidden="true"></i> Welcome to Week One!</a></li>
+  <li><a href="#-homework-week-1" id="markdown-toc--homework-week-1"><i class="fa fa-pencil"></i> Homework Week 1</a></li>
+  <li><a href="#homework-submission-create-a-report-using-jupyter-notebooks" id="markdown-toc-homework-submission-create-a-report-using-jupyter-notebooks"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Homework Submission: Create A Report Using Jupyter Notebooks</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<div class="notice--info">
+
+  <h2 id="welcome-to-week-one"><i class="fa fa-ship" aria-hidden="true"></i> Welcome to Week One!</h2>
+
+  <p>Welcome to week one of Earth Analytics! In week 1 we will explore data together
+in class related to the 2013 Colorado Floods. In your homework, you will set up
+<code class="highlighter-rouge">Python</code> and <code class="highlighter-rouge">Jupyter Notebook</code> on your laptop and learn how to create an Jupyter Notebook
+document and convert it to an .html.</p>
+
+  <p><a class="btn btn-info btn--x-large" href="http://localhost:4000/slide-shows/4-earth-analytics-spring-2017-intro/" target="_blank"> <i class="fa fa-youtube-play" aria-hidden="true"></i> View course overview slideshow
+</a></p>
+
+  <p><a class="btn btn-info btn--large" href="https://docs.google.com/document/d/1EY9vxr3bAi81xfuIcNvjMRQqbSkXc9qoau0Pn3cahLQ/edit" target="_blank"> View climate change google doc
+</a>
+<a class="btn btn-info btn--large" href="https://docs.google.com/document/d/1XuPS0oHh6lRo47sQ4XB-WSWvRQBoS2HWksNc6v_JSic/edit# " target="_blank"> View FLOODING change google doc
+</a></p>
+
+</div>
+
+<h2 id="-homework-week-1"><i class="fa fa-pencil"></i> Homework Week 1</h2>
+
+<h3 id="1-readings">1. Readings</h3>
+
+<ul>
+  <li><a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0850-7" target="_blank">Five selfish reasons to work reproducibly - Florian Markowetz</a></li>
+  <li><a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002303" target="_blank"> Computing Workflows for Biologists: A Roadmap</a></li>
+  <li><a href="http://science.sciencemag.org/content/330/6006/916" target="_blank">Earth System Science for Global Sustainability: Grand Challenges (read the full article)</a></li>
+</ul>
+
+<h3 id="2-watch-flood-video">2. Watch flood video</h3>
+<p>First, watch this video to learn more about the 2013 Colorado floods and some
+of the data that can be used to better understand the drivers and impacts of those
+floods.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IHIckvWhwoo" frameborder="0" allowfullscreen=""></iframe>
+
+<h4 id="before--after-google-earth-fly-through">Before / after google earth fly through</h4>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bUcWERTM-OA?rel=0&amp;loop=1" frameborder="0" allowfullscreen=""></iframe>
+
+<h3 id="3-review-open-science-slide-show">3. Review open science slide show</h3>
+<p>Note: these were also linked in the lessons below.</p>
+
+<p><a class="btn btn-info" href="http://localhost:4000/slide-shows/share-publish-archive/" target="_blank"> <i class="fa fa-youtube-play" aria-hidden="true"></i>
+View Slideshow: Share, Publish &amp; Archive Code &amp; Data</a></p>
+
+<h3 id="4-review-lessons">4. Review lessons</h3>
+<p>The second part of your homework assignment is to review the homework lessons (see links
+on the left hand side of this page).
+Following the lessons, setup <code class="highlighter-rouge">Python</code>, <code class="highlighter-rouge">Jupyter Notebook</code> and a
+<code class="highlighter-rouge">working directory</code> that will contain the data we will use for week one and the
+rest of the semester on your laptop.</p>
+
+<p>Once everything is setup, complete the second set of lessons which walk you
+through creating R markdown documents and knitting them to <code class="highlighter-rouge">.html</code> format. If you
+already are familiar with <code class="highlighter-rouge">Jupyter Notebooks</code>, be sure to review the lessons anyway - particularly
+the ones about file organization and why we use this workflow in science.</p>
+
+<p class="notice"><i class="fa fa-star" aria-hidden="true"></i> <strong>Important:</strong> Review
+ALL of the lessons and have your computer setup BEFORE class begins next week.
+You will be behind if these things are not setup / complete before week 2.</p>
+
+<h3 id="5-complete-assignment-below">5. Complete assignment below</h3>
+
+<p>After you have reviewed the lessons above, complete the assignment below.
+Submit your <code class="highlighter-rouge">.html</code> document and <code class="highlighter-rouge">.ipynb</code> document to the D2L course drop box
+by <strong>Wed 25 January 2017 at NOON Mountain Time.</strong></p>
+
+<!-- start homework activity -->
+
+<div class="notice--warning">
+
+  <h2 id="homework-submission-create-a-report-using-jupyter-notebooks"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Homework Submission: Create A Report Using Jupyter Notebooks</h2>
+
+  <ul>
+    <li>
+      <p>Create a new notebook <code class="highlighter-rouge">.ipynb</code> file in <code class="highlighter-rouge">Jupyter Notebook</code>. Name the file:
+<code class="highlighter-rouge">yourLastName-firstInitial-week1.ipynb</code> example: <code class="highlighter-rouge">wasser-l-week1.ipynb</code></p>
+    </li>
+    <li>Add an author in a cell of markdown at the top of the document</li>
+    <li>Give your file an appropriate title. Suggestion: <code class="highlighter-rouge">Earth Analytics Spring 2017: Homework - Week 1</code></li>
+    <li>
+      <p>At the top of the notebook make a markdown cell and add some text
+that describes:</p>
+
+      <ul>
+        <li>What an <code class="highlighter-rouge">.ipynb</code> file is</li>
+        <li>Why using <code class="highlighter-rouge">Jupyter Notebooks</code> to create reports can be helpful to both you and your colleagues that you work with on a project.</li>
+      </ul>
+    </li>
+    <li>Create a new CODE CHUNK</li>
+    <li>Copy and paste the code BELOW into the code chunk that you just created.</li>
+    <li>Below the code chunk in your document, add some TEXT that describes what the plot that you created
+shows - interpret what you see in the data.</li>
+    <li>Finally, in your own words, summarize what you think the plot shows / tells us about
+the flood and also how the data that produced the plot were likely collected. Use the video
+about the Boulder Floods as a reference when you write this summery.</li>
+  </ul>
+
+  <p>BONUS: If you know <code class="highlighter-rouge">python</code>, clean up the plot by adding labels and a title.</p>
+
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># import libraries</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c"># download data from figshare</span>
+<span class="c"># note that you are downloading the data into your data directory</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://ndownloader.figshare.com/files/7010681'</span>
+<span class="n">destfile</span> <span class="o">=</span> <span class="s">"data/boulder-precip.csv"</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">destfile</span><span class="p">)</span>
+
+<span class="c"># import data to a pandas dataframe</span>
+<span class="n">boulder_precip</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">destfile</span><span class="p">)</span>
+
+<span class="c"># view the first few rows of data</span>
+<span class="n">display</span><span class="p">(</span><span class="n">boulder_precip</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c"># view each column of the data frame using it's name/header</span>
+<span class="n">display</span><span class="p">(</span><span class="n">boulder_precip</span><span class="p">[</span><span class="s">'DATE'</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">boulder_precip</span><span class="p">[</span><span class="s">'PRECIP'</span><span class="p">])</span>
+
+<span class="c"># create plot using matplotlib</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s">'DATE'</span><span class="p">,</span><span class="s">'PRECIP'</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">boulder_precip</span><span class="p">)</span>
+
+<span class="c"># rotate x tick labels to be legible</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="c"># draw plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p>/images/python-screenshots/hw/hw-01-ex-nb.png</p>
+
+<figure>
+<a href="/images/python-screenshots/hw/hw01-simple-plot.png">
+<img src="/images/python-screenshots/hw/hw01-simple-plot.png" alt="example plot." />
+</a>
+<figcaption>
+If your code ran properly, the resulting plot should look like this one.
+</figcaption>
+</figure>
+
+<figure>
+<a href="/images/python-screenshots/hw/hw-01-ex-nb.png">
+<img src="/images/python-screenshots/hw/hw-01-ex-nb.png" alt="Jupyter Notebook example image." />
+</a>
+<figcaption>
+Your Jupyter Notebook should look something like the one above (with your own text
+added to it). Note that the image above is CROPPED at the bottom. Your Jupyter Notebook
+file will have more code in it.
+</figcaption>
+</figure>
+
+<h3 id="troubleshooting-missing-plot">Troubleshooting: missing plot</h3>
+
+<p>If the code above did not produce a plot, please check the following:</p>
+
+<h4 id="check-your-working-directory">Check your working directory</h4>
+
+<p>If the path to your file is not correct, then the data won’t load into <code class="highlighter-rouge">python</code>.
+If the data don’t load into <code class="highlighter-rouge">python</code>, then you can’t work with it or plot it.</p>
+
+<p>To figure out your current working directory use the command: <code class="highlighter-rouge">os.getcwd()</code></p>
+
+<p>Next, go to your finder or file explorer on your computer. Navigate to the path
+that <code class="highlighter-rouge">python</code> gives you when you type `` in the console. It will look something
+like the path example: <code class="highlighter-rouge">/Users/your-username/documents/earth-analytics</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># check your working directory</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+
+<span class="c">## [1] "/Users/lewa8222/documents/earth-analytics"</span>
+</code></pre></div></div>
+
+<p>In the example above, note that my USER directory is called <code class="highlighter-rouge">lewa8222</code>. Yours
+is called something different. Is there a <code class="highlighter-rouge">data</code> directory within the earth-analytics
+directory?</p>
+
+<figure>
+<a href="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/data-dir-wk-1.png">
+<img src="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/data-dir-wk-1.png" alt="data directory example image." />
+</a>
+<figcaption>
+Your working directory should contain a `/data` directory.
+</figcaption>
+</figure>
+
+<p>If not, review the <a href="/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/">working directory lesson</a>
+to ensure your working directory is SETUP properly.</p>
+
+<!-- end homework activity -->
+
+        
+
+        <!-- if the page is a course lesson, add pagination -->
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-05T00:00:00-07:00">February 05, 2018</time></p>
+        
+      </footer>
+
+      
+
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+       
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+
+
+<!-- Adding analytics code -->
+
+        
+
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    <li>
+      <strong>&copy; 2018 Earth Lab -
+      <a href="http://localhost:4000/license"> View License. </a>
+      Questions? Feedback? Please file an issue on GitHub.</strong>
+    </li>
+  </ul>
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/earthlab"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-84081999-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>
+

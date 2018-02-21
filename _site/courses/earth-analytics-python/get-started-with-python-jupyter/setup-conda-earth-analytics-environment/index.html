@@ -1,0 +1,1166 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+
+<meta charset="utf-8">
+
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Set up Conda Envrionment - Earth Data Science - Earth Lab</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Earth Data Science - Earth Lab">
+<meta property="og:title" content="Set up Conda Envrionment">
+
+
+  <link rel="canonical" href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/">
+  <meta property="og:url" content="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/">
+
+
+
+  <meta property="og:description" content="This tutorial walks you through installing a conda environment designed for this class.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2018-02-05T00:00:00-07:00">
+  
+    <link rel="next" href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/" title="Text Editors for the Command Line and Scientific Programming">
+  
+  
+    <link rel="prev" href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/" title="How to Access and use shell to set up a Working Directory">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Earth Analytics",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Earth Data Science - Earth Lab Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="LfpevjsE0wlELv5KKOZv1T2RhRimGSiRckWv5ZC19GU" />
+<!-- don't use the old cataloged meta tags -->
+<meta name="googlebot" content="noodp">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<!-- search bar begin  - turning off for now-->
+
+<div class="search">
+<form role="search" method="get" action="http://localhost:4000/search/">
+    <input id="q" name="q"
+           placeholder="Search earth data science site" type="text">
+</form>
+</div>
+
+
+<!-- search bar END -->
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Earth Data Science - Earth Lab</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tutorials/">Tutorials</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/courses/">Courses</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tools/">Tools</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/events/">Events</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://www.colorado.edu/earthlab">Earth Lab CU</a></li>
+          
+
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+ <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<a href="http://localhost:4000"></a>
+ 
+   
+   
+     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+       <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+       <meta itemprop="position" content="" />
+     </li>
+     <span class="sep">/</span>
+   
+    
+        <li><a href="http://localhost:4000/courses/">Courses</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/">Earth analytics python</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/">Get started with python jupyter</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li class="current">Set up Conda Envrionment</li>
+    
+  
+</ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+
+    
+     <!--  Might be able to delete this This is the code that populates the side bar navigation if there is a class-->
+      
+
+
+
+
+<!-- make sure we're only grabbing pages for the course -->
+
+
+
+<!--<h3>Week 1 Lessons</h3>-->
+<!-- i don't think the code below is used as modules is defined lower down as well. -->
+
+<!-- This is how modules are sorted on the left hand side bar -->
+
+
+
+
+
+
+<!-- BEGIN commenting this out - this is the old code when only individual module content was on the page vs the entire course-->
+
+
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics/" ><i class="fa fa-home" aria-hidden="true"></i> Earth-analytics-python Home</a></h5>
+
+
+<!-- Just get the pages from this course -->
+
+
+
+
+
+
+<nav class="nav__list">
+
+
+
+
+
+
+<ul>
+  <li><span class="nav__sub-title"><i class="fa fa-book" aria-hidden="true"></i> Units</span>
+   <ul>
+    
+
+    <!-- Only list the week if it's not the week for the current landing page -->
+    
+
+
+      
+       
+        <li class='active-section'> <a href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/"><i class="fa fa-folder-open" aria-hidden="true"></i>
+           1. GET STARTED WITH DATA IN PYTHON / JUPYTER NOTEBOOKS</a></li>
+        
+
+<div class='active-menu'>
+      <ul>
+        
+        
+
+        
+
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Open science python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/why-open-science/><!--1.1 --> - Why Open Science</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/><!--1.2 --> - File Organization Tips</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/><!--1.3 --> - Intro to Markdown</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/><!--1.4 --> - Intro to Jupyter</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/><!--1.5 --> - Install and Import Packages</a></li>
+          
+          
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Intro setup python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/><!--1.1 --> - Install Git, Bash & Anaconda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/><!--1.2 --> - Bash</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/ class='active'> <!--1.3 -->- Set up Conda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/><!--1.4 --> - Text Editors For Coding</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Use data for science </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/google-earth-time-series/><!--1.1 --> - Google Earth Time Series</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/co-floods-data-example-python/><!--1.2 --> - Data Driven Report</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/><!--1.3 --> - Interactive Data Plots</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+      </ul>
+
+      <!-- BEGIN Learn how to lessons -->
+       <ul>
+         
+         
+       </ul>
+
+
+     </div>
+
+
+      <!-- END BEGIN Learn how to lessons -->
+
+      <!--  -->
+      
+
+    
+  </ul></li>
+ </ul>
+
+
+ <ul>
+   <li><span class="nav__sub-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Overview</span>
+    <ul>
+     
+   </ul>
+ </li>
+</ul>
+</nav>
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics-python/" ><i class="fa fa-home" aria-hidden="true"></i> earth-analytics-python Home</a></h5>
+
+    
+
+    
+
+
+
+  
+  </div>
+
+
+
+
+
+<!-- begin science / science themes side bar nav -->
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <meta itemprop="headline" content="Set up Conda Envrionment">
+    <meta itemprop="description" content="This tutorial walks you through installing a conda environment designed for this class.">
+    <meta itemprop="datePublished" content="February 05, 2018">
+    <meta itemprop="dateModified" content="February 15, 2018">
+
+    <div class="page__inner-wrap">
+      
+
+        <header>
+          <!-- BEGIN: insert a welcome to the module block on pages that are part of a module set -->
+
+          <!-- END: insert welcome block -->
+          <h1 class="page__title" itemprop="headline">
+            Lesson 3. 
+             Set up Conda Envrionment
+ </h1>
+          
+
+          
+            <div class="page__meta">
+              
+              
+              <a href="http://localhost:4000/authors/leah-wasser">Leah Wasser</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/martha-morrissey">Martha Morrissey</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/data-carpentry">Data Carpentry</a>
+              
+            </div>
+        
+
+        <br/>
+
+        
+
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <!-- would like to include the TOC automatically but this does weird things-->
+        
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> In This Lesson</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#learning-objectives" id="markdown-toc-learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</a></li>
+  <li><a href="#what-you-need" id="markdown-toc-what-you-need"><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need</a></li>
+  <li><a href="#set-up-a-conda-python-environment" id="markdown-toc-set-up-a-conda-python-environment">Set up A Conda Python Environment</a></li>
+  <li><a href="#manage-your-conda-environment" id="markdown-toc-manage-your-conda-environment">Manage Your Conda Environment</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>In this lesson you will learn how to install a conda environment designed specifically for this class called earth-analytics-python from a yaml file</p>
+
+<div class="notice--success">
+
+  <h2 id="learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h2>
+
+  <p>At the end of this activity, you will be able to:</p>
+
+  <ul>
+    <li>install anaconda</li>
+    <li>install a new environment</li>
+    <li>view the available environments</li>
+  </ul>
+
+  <h2 id="what-you-need"><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need</h2>
+
+  <p>You should have Shell and the Anaconda distribution of python 3.x setup on your computer and an Earth Analytics working directory. Use the lessons below to help you get setup:</p>
+
+  <ul>
+    <li>Completed the setup shell and conda lesson</li>
+    <li>Have an Earth Analytics Directory on your computer</li>
+  </ul>
+
+</div>
+
+<p>Information below is adapted from materials developed by the Conda documentation for <a href="https://conda.io/docs/user-guide/install/index.html">installing conda</a> and <a href="https://conda.io/docs/user-guide/tasks/manage-pkgs.html">managing packages</a>.</p>
+
+<h2 id="set-up-a-conda-python-environment">Set up A Conda Python Environment</h2>
+
+<h3 id="install-the-earth-lab-conda-environment">Install the Earth Lab Conda Environment</h3>
+
+<p>Anaconda allows you to have different environments installed on your computer to access different versions of python and different libraries. Sometimes libraries conflict which causes errors and packages not to work. To avoid conflicts, we created an environment specifically for this earth analytics course that contains all of the spatial libraries that you will need.</p>
+
+<p class="notice--success"><i fa="" fa-star=""></i><strong>Data Tip:</strong>
+For more information about conda environments check out the <a href="https://conda.io/docs/user-guide/tasks/index.html">conda documentation</a>.</p>
+
+<p>To install the earth lab environment you will be working in the terminal.</p>
+
+<h3 id="where-to-install-python-libraries-from">Where to Install Python Libraries From</h3>
+
+<p>There are many different python repositories that house  libraries like geopandas. To access each repository, you use a command at the terminal.</p>
+<ul>
+  <li>pip install installs libraries using pip from a pip specific repo</li>
+  <li>Conda install installs libraries using the conda repo</li>
+</ul>
+
+<p>For this class, most python libraries will be installed with <code class="highlighter-rouge">conda-forge</code> to reduce the potential of installation conflicts.</p>
+
+<h3 id="about-the-conda-environment">About the Conda Environment</h3>
+
+<p>Let’s take a minute to explore the Conda python environment! Notice at the top of the file there is the environment name. This file has a few key parts:</p>
+
+<ol>
+  <li>
+    <p>NAME: the name of the environment that you will call when you wish to activate the environment. The name earth-analytics-python is defined in the environment.yml file.</p>
+  </li>
+  <li>
+    <p>Channels: this lists where packages will be installed from. There are many options including conda, conda-forge and pip. You will be predominately using conda-forge for all of the earth-analytics courses.</p>
+  </li>
+  <li>
+    <p>Dependencies: Dependencies are all of the things that you need installed in order for the environment to be complete. In the example, python version 3.6 is specified because this is because it works best with gdal. The order in which the libraries should be installed is also specified.</p>
+  </li>
+</ol>
+
+<h3 id="use-a-pre-configured-installation-script">Use a Pre-configured Installation Script</h3>
+<p>When you work with Anaconda, you can create custom lists that tell anaconda where to install libraries from, and in what order. You can even specify a particular version. You write this list using <a href="http://yaml.org/">yaml</a> (Yet Another Markup Language).</p>
+
+<p>There is a custom yaml list that you can use to  install all of the python libraries that you will need to complete the lessons in this course. This yaml list is customized to install libraries from the repositories and in an order that minimizes conflicts. If you run into any issues installing the environment from the yaml leave a comment at the bottom of the page.</p>
+
+<h3 id="heres-what-part-of-the-yaml-file-looks-like">Here’s what part of the yaml file looks like:</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: earth-analytics-python
+channels:
+  - conda-forge
+dependencies:
+  # Core scientific python libraries
+  - numpy
+  - matplotlib
+  - python=3.6
+  - pyqt
+  - seaborn
+
+  # spatial libraries
+  - rasterstats
+  - geopy
+  - cartopy
+  - geopandas
+  
+</code></pre></div></div>
+
+<p>Follow these steps below to get your environment ready.
+An environment for conda has been created specifically for this course. To load this:</p>
+
+<ol>
+  <li>Download the custom yaml list from <link />/download button</li>
+  <li>Move this file into your earth-analytics directory</li>
+  <li>Open your favorite bash envt. This may cygwin or gitbash on windows or terminal on a mac.</li>
+  <li>Navigate to your earth-analytics directory on your computer. (remember the cd command in terminal means change directory)</li>
+  <li>conda env create -f environment.yml</li>
+</ol>
+
+<p>Note that it takes a bit of time to run this setup as it needs to download and install each library
+IMPORTANT: you need to have internet access for this to run!</p>
+
+<p class="notice--success"><i fa="" fa-star=""></i><strong>Data Tip:</strong>
+The instructions above will only work if you run them in the directory where you placed the environment.yml file</p>
+
+<h2 id="manage-your-conda-environment">Manage Your Conda Environment</h2>
+
+<p>You can have different python environments on your computer. Anaconda allows you to easily jump between environments using a set of commands that you run in your terminal. To manage your conda environments, use the following commands:</p>
+
+<h3 id="view-a-list-of-all-installed-environments">View a list of all installed environments</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+conda info <span class="nt">--envs</span>
+
+</code></pre></div></div>
+
+<h3 id="activate-the-environment-that-youd-like-to-use">Activate the environment that you’d like to use</h3>
+<p>If you want to jupyter notebooks to use a particular environment that you have setup on your computer, you need to activate it. For example if you geopandas is only installed in the earth-analytics-python environment, and not the default anaconda environment, you will not be able to load it in jupyter unless you have the earth-analytics-python environment activated.</p>
+
+<p>To active an environment, first navigate to your earth-analytics working directory.  Then use the following code at the command line to activate the environment that you want. In this case you will want to activate the earth-analytics-python environment:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source activate earth-analytics-python
+
+</code></pre></div></div>
+
+<h3 id="deactivate-the-environment">Deactivate the environment</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Source deactivate earth-analytics-python
+
+</code></pre></div></div>
+
+<p>Deactivating the environment switches you back to the default environment in your computer. 
+Before doing work for this class always make sure that the earth analytics-python environment is activated. The name of the activate environment will appear in parentheses on the left side of your terminal.</p>
+
+<p><i fa="" fa-star=""></i><strong>Data Tip:</strong>
+Notice how after you restart the terminal, the Earth Analytics environment is no longer active. 
+Activate the earth-analytics-python environment by running:</p>
+
+<div class="notice--success highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+source activate earth-analytics-python
+
+</code></pre></div></div>
+
+
+        
+
+        <!-- if the page is a course lesson, add pagination -->
+
+        
+         <!-- This is clunky code that forces pagination across lesson sets -->
+<!-- NOTE: it won't include slideshows as written which makes sense -->
+<!-- add forced pagination -->
+<!-- first, get total lesson count -->
+
+<div class="previous--next">
+
+
+
+
+<!-- if it's page one - then no previous button -->
+<!-- how do i figure out the link? i have to loop through again? -->
+
+    
+
+    
+      
+
+      
+      
+       <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/" class="btn btn--info btn--large btn-success" style="float:right" >
+         Text Editors For Coding
+         <i class="fa fa-4 fa-arrow-circle-right" aria-hidden="true"></i></a>
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+        <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/" class="btn btn--info btn--large btn-success">
+          <i class="fa fa-4 fa-arrow-circle-left fa-4" aria-hidden="true"></i>
+          Bash </a>
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags
+  
+  <span class="a-main-tag">
+  <i class="fa fa-fw fa-tag" aria-hidden="true"></i><a href=http://localhost:4000/tags/reproducible-science-and-programming/>Reproducible science and programming</a>:
+  </span>
+  
+    
+    <a href=http://localhost:4000/tags/reproducible-science-and-programming/python/>python</a> 
+    
+    
+  
+
+
+
+
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-15">February 15, 2018</time></p>
+        
+      </footer>
+
+      
+
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+       
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Text Editors for the Command Line and Scientific Programming
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  7 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text e...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">How to Access and use shell to set up a Working Directory
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directo...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Setup Git, Bash, and Anaconda on Your Computer
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Introduction to Markdown
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through how to install and import python packages.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+
+
+<!-- Adding analytics code -->
+
+        
+
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    <li>
+      <strong>&copy; 2018 Earth Lab -
+      <a href="http://localhost:4000/license"> View License. </a>
+      Questions? Feedback? Please file an issue on GitHub.</strong>
+    </li>
+  </ul>
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/earthlab"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-84081999-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>
+

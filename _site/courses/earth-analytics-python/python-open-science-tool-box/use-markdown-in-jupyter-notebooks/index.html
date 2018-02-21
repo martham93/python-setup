@@ -1,0 +1,1193 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+
+<meta charset="utf-8">
+
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Introduction to Markdown - Earth Data Science - Earth Lab</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Earth Data Science - Earth Lab">
+<meta property="og:title" content="Introduction to Markdown">
+
+
+  <link rel="canonical" href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/">
+  <meta property="og:url" content="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/">
+
+
+
+  <meta property="og:description" content="This tutorial walks you through how to format text using markdown.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2018-02-05T00:00:00-07:00">
+  
+    <link rel="next" href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/" title="Introduction to Markdown">
+  
+  
+    <link rel="prev" href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/" title="File Organization Tips">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Earth Analytics",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Earth Data Science - Earth Lab Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="LfpevjsE0wlELv5KKOZv1T2RhRimGSiRckWv5ZC19GU" />
+<!-- don't use the old cataloged meta tags -->
+<meta name="googlebot" content="noodp">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<!-- search bar begin  - turning off for now-->
+
+<div class="search">
+<form role="search" method="get" action="http://localhost:4000/search/">
+    <input id="q" name="q"
+           placeholder="Search earth data science site" type="text">
+</form>
+</div>
+
+
+<!-- search bar END -->
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Earth Data Science - Earth Lab</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tutorials/">Tutorials</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/courses/">Courses</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tools/">Tools</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/events/">Events</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://www.colorado.edu/earthlab">Earth Lab CU</a></li>
+          
+
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+ <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<a href="http://localhost:4000"></a>
+ 
+   
+   
+     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+       <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+       <meta itemprop="position" content="" />
+     </li>
+     <span class="sep">/</span>
+   
+    
+        <li><a href="http://localhost:4000/courses/">Courses</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/">Earth analytics python</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/">Python open science tool box</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li class="current">Introduction to Markdown</li>
+    
+  
+</ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+
+    
+     <!--  Might be able to delete this This is the code that populates the side bar navigation if there is a class-->
+      
+
+
+
+
+<!-- make sure we're only grabbing pages for the course -->
+
+
+
+<!--<h3>Week 1 Lessons</h3>-->
+<!-- i don't think the code below is used as modules is defined lower down as well. -->
+
+<!-- This is how modules are sorted on the left hand side bar -->
+
+
+
+
+
+
+<!-- BEGIN commenting this out - this is the old code when only individual module content was on the page vs the entire course-->
+
+
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics/" ><i class="fa fa-home" aria-hidden="true"></i> Earth-analytics-python Home</a></h5>
+
+
+<!-- Just get the pages from this course -->
+
+
+
+
+
+
+<nav class="nav__list">
+
+
+
+
+
+
+<ul>
+  <li><span class="nav__sub-title"><i class="fa fa-book" aria-hidden="true"></i> Units</span>
+   <ul>
+    
+
+    <!-- Only list the week if it's not the week for the current landing page -->
+    
+
+
+      
+       
+        <li class='active-section'> <a href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/"><i class="fa fa-folder-open" aria-hidden="true"></i>
+           1. GET STARTED WITH DATA IN PYTHON / JUPYTER NOTEBOOKS</a></li>
+        
+
+<div class='active-menu'>
+      <ul>
+        
+        
+
+        
+
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Open science python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/why-open-science/><!--1.1 --> - Why Open Science</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/><!--1.2 --> - File Organization Tips</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/ class='active'> <!--1.3 -->- Intro to Markdown</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/><!--1.4 --> - Intro to Jupyter</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/><!--1.5 --> - Install and Import Packages</a></li>
+          
+          
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Intro setup python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/><!--1.1 --> - Install Git, Bash & Anaconda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/><!--1.2 --> - Bash</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/><!--1.3 --> - Set up Conda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/><!--1.4 --> - Text Editors For Coding</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Use data for science </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/google-earth-time-series/><!--1.1 --> - Google Earth Time Series</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/co-floods-data-example-python/><!--1.2 --> - Data Driven Report</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/><!--1.3 --> - Interactive Data Plots</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+      </ul>
+
+      <!-- BEGIN Learn how to lessons -->
+       <ul>
+         
+         
+       </ul>
+
+
+     </div>
+
+
+      <!-- END BEGIN Learn how to lessons -->
+
+      <!--  -->
+      
+
+    
+  </ul></li>
+ </ul>
+
+
+ <ul>
+   <li><span class="nav__sub-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Overview</span>
+    <ul>
+     
+   </ul>
+ </li>
+</ul>
+</nav>
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics-python/" ><i class="fa fa-home" aria-hidden="true"></i> earth-analytics-python Home</a></h5>
+
+    
+
+    
+
+
+
+  
+  </div>
+
+
+
+
+
+<!-- begin science / science themes side bar nav -->
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <meta itemprop="headline" content="Introduction to Markdown">
+    <meta itemprop="description" content="This tutorial walks you through how to format text using markdown.">
+    <meta itemprop="datePublished" content="February 05, 2018">
+    <meta itemprop="dateModified" content="February 15, 2018">
+
+    <div class="page__inner-wrap">
+      
+
+        <header>
+          <!-- BEGIN: insert a welcome to the module block on pages that are part of a module set -->
+
+          <!-- END: insert welcome block -->
+          <h1 class="page__title" itemprop="headline">
+            Lesson 3. 
+             Introduction to Markdown
+ </h1>
+          
+
+          
+            <div class="page__meta">
+              
+              
+              <a href="http://localhost:4000/authors/leah-wasser">Leah Wasser</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/martha-morrissey">Martha Morrissey</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/data-carpentry">Data Carpentry</a>
+              
+            </div>
+        
+
+        <br/>
+
+        
+
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <!-- would like to include the TOC automatically but this does weird things-->
+        
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> In This Lesson</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#learning-objectives" id="markdown-toc-learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</a></li>
+  <li><a href="#markdown" id="markdown-toc-markdown">Markdown</a></li>
+  <li><a href="#get-to-know-the-markdown-syntax" id="markdown-toc-get-to-know-the-markdown-syntax">Get to Know the Markdown Syntax</a></li>
+  <li><a href="#heading-two" id="markdown-toc-heading-two">Heading two</a></li>
+  <li><a href="#additional-resources" id="markdown-toc-additional-resources">Additional Resources</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>This tutorial walks you through how to format text using markdown</p>
+
+<div class="notice--success">
+
+  <h2 id="learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h2>
+
+  <p>At the end of this activity, you will be able to:</p>
+
+  <ul>
+    <li>Define what the markdown syntax is</li>
+    <li>Create  a heading 1, 2 or 3 using Markdown syntax</li>
+    <li>Italicize and bold text using Markdown</li>
+  </ul>
+
+</div>
+
+<h2 id="markdown">Markdown</h2>
+
+<p>Markdown is a human readable syntax for formatting text documents. Markdown can be used to produce nicely formatted documents including pdf’s and web pages. When you format text using markdown in a document, it is similar to using the format tools (bold, heading 1, heading 2, etc) in a word processing tool like Microsoft Word of Google Docs. However instead of using buttons to apply formatting, you use syntax such as <code class="highlighter-rouge">**this bolds text in markdown**</code> or <code class="highlighter-rouge"># Here is a heading</code>.Markdown allows you to format text - such as making headings, italics, bold, bulleted list, add links, format mathematical symbols and , make tables ect.</p>
+
+<p class="notice--success"><i fa="" fa-star=""></i><strong>Data Tip:</strong>
+Learn more about <a href="http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html">markdown</a></p>
+
+<h3 id="markdown-syntax-in-jupyter-notebook-files">Markdown Syntax in Jupyter Notebook files</h3>
+
+<p>Jupyter notebooks allow you to combine code and Markdown in one document. A Jupyter notebook can contain text written using the markdown syntax, in a cell that is specified for markdown.</p>
+
+<figure>
+ <a href="http://localhost:4000/images/python-screenshots/setup-python/md-cell.png">
+ <img src="http://localhost:4000/images/python-screenshots/setup-python/md-cell.png" /></a>
+ <figcaption> Jupyter Notebook with a markdown cell.
+ </figcaption>
+</figure>
+
+<p>The text that you add to a Jupyter notebook using Markdown can serve many different purposes. It could be used to:</p>
+
+<ul>
+  <li>Document your workflow: You may add text to the document that describes the steps that you incorporated into your processing workflow</li>
+  <li>Describe your data:It could describe the data that you are using, how it’s being processed and what the outputs are.</li>
+  <li>Interpret code outputs: You may even add some text that interprets or discusses the outputs.</li>
+</ul>
+
+<p>When you render your document to HTML or pdf) this markdown will appear as text on the output document.</p>
+
+<p class="notice--success"><i fa="" fa-star=""></i><strong>Data Tip:</strong>
+This web page that you are reading right now is generated from a markdown document. In this tutorial, we cover the basic syntax of markdown.</p>
+
+<h2 id="get-to-know-the-markdown-syntax">Get to Know the Markdown Syntax</h2>
+
+<p>Markdown is simple plain text, that is styled using special characters, including:</p>
+
+<p>#: a header element</p>
+
+<p>**: bold text</p>
+
+<p>*: italic text</p>
+
+<p>` : code blocks</p>
+
+<p>Let’s review some basic markdown syntax</p>
+
+<h3 id="paragraph-text">Paragraph Text</h3>
+
+<p>When you type text in a markdown document with no additional syntax, the text
+will appear as paragraph text. You can add additional syntax to that text
+to format it in different ways.</p>
+
+<p>For example, if you want to highlight a function or some code within a plain text
+paragraph, we can use one backtick on each side of the text ( <code>`code-goes-here`</code> ),
+like this: <code>`Here is some code`</code>. This is the backtick, or grave; not
+an apostrophe (on most US keyboards it is on the same key as the tilde (~)).</p>
+
+<p>To add emphasis to other text you can use <strong>bold</strong> or <em>italics</em>.</p>
+
+<p>Have a look at the markdown below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The use of the highlight ( `text` ) will be reserved for denoting code.
+To add emphasis to other text use **bold** or *italics*.
+</code></pre></div></div>
+
+<p>Notice that this sentence uses both a code highlight “``”, bold and italics.
+As a rendered markdown chunk, it looks like this:</p>
+
+<hr />
+
+<p>The use of the highlight ( <code class="highlighter-rouge">text</code> ) will be reserve for denoting code when
+used in text. To add emphasis to other text use <strong>bold</strong> or <em>italics</em>.</p>
+
+<hr />
+
+<h3 id="horizontal-lines-rules">Horizontal Lines (rules)</h3>
+
+<p>Create a rule:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ***
+
+
+  ***
+</code></pre></div></div>
+
+<h3 id="here-is-rendered-markdown">Here is rendered markdown:</h3>
+
+<p>Section Headings
+We create a heading using the pound (#) sign. For the headers to render
+properly there must be a space between the # and the header text.
+Heading one is 1 # sign, heading two is 2 ## signs, etc as follows:</p>
+
+<h2 id="heading-two">Heading two</h2>
+
+<h3 id="heading-three">Heading three</h3>
+
+<h4 id="heading-four">Heading four</h4>
+
+<h3 id="explore-markdown-cells-in-a-jupyter-notebook">Explore Markdown Cells in a Jupyter Notebook</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span> <span class="s">"Hello Earth Analytics"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You should now be able to: 
+*define markdown</p>
+<ul>
+  <li>make a heading</li>
+  <li><strong>italicize</strong> some text</li>
+</ul>
+
+<h3 id="explore-markdown-cells-in-a-jupyter-notebook-1">Explore Markdown Cells in a Jupyter Notebook</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span> <span class="s">"Hello Earth Analytics"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You should now be able to: 
+*define markdown</p>
+<ul>
+  <li>make a heading</li>
+  <li><strong>italicize</strong> some text</li>
+</ul>
+
+<p>Check out the markdown cell above. Does any of the markdown syntax look familiar?</p>
+<ul>
+  <li>Are any words in bold?</li>
+  <li>Are any words in italics?</li>
+  <li>Are any words highlighted as code?</li>
+  <li>Is any of the text in a bulleted list ?</li>
+</ul>
+
+<p>If you are unsure, the answers are at the bottom of this page.</p>
+
+<div class="notice--info">
+
+  <h2 id="additional-resources">Additional Resources</h2>
+
+  <ul>
+    <li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank">GitHub Guide on Markdown</a></li>
+    <li><a href="http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html" target="_blank"> Jupyter Notebook Markdown Resources</a></li>
+  </ul>
+
+</div>
+
+<p>Answers to the Default Text Markdown Syntax Questions</p>
+<ul>
+  <li>Are any words in bold? - Yes, Italicize</li>
+  <li>Are any words in italics? - No</li>
+  <li>Are any words highlighted as code? - Yes (print “Earth Analytics Python”)</li>
+</ul>
+
+        
+
+        <!-- if the page is a course lesson, add pagination -->
+
+        
+         <!-- This is clunky code that forces pagination across lesson sets -->
+<!-- NOTE: it won't include slideshows as written which makes sense -->
+<!-- add forced pagination -->
+<!-- first, get total lesson count -->
+
+<div class="previous--next">
+
+
+
+
+<!-- if it's page one - then no previous button -->
+<!-- how do i figure out the link? i have to loop through again? -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+       <a href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/" class="btn btn--info btn--large btn-success" style="float:right" >
+         Intro to Jupyter
+         <i class="fa fa-4 fa-arrow-circle-right" aria-hidden="true"></i></a>
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+        <a href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/" class="btn btn--info btn--large btn-success">
+          <i class="fa fa-4 fa-arrow-circle-left fa-4" aria-hidden="true"></i>
+          File Organization Tips </a>
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags
+  
+  <span class="a-main-tag">
+  <i class="fa fa-fw fa-tag" aria-hidden="true"></i><a href=http://localhost:4000/tags/reproducible-science-and-programming/>Reproducible science and programming</a>:
+  </span>
+  
+    
+    <a href=http://localhost:4000/tags/reproducible-science-and-programming/markdown/>markdown</a> 
+    
+    
+  
+
+
+
+
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-15">February 15, 2018</time></p>
+        
+      </footer>
+
+      
+
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+       
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Text Editors for the Command Line and Scientific Programming
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  7 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text e...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Set up Conda Envrionment
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  4 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through installing a conda environment designed for this class.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">How to Access and use shell to set up a Working Directory
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directo...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Setup Git, Bash, and Anaconda on Your Computer
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+
+
+<!-- Adding analytics code -->
+
+        
+
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    <li>
+      <strong>&copy; 2018 Earth Lab -
+      <a href="http://localhost:4000/license"> View License. </a>
+      Questions? Feedback? Please file an issue on GitHub.</strong>
+    </li>
+  </ul>
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/earthlab"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-84081999-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>
+

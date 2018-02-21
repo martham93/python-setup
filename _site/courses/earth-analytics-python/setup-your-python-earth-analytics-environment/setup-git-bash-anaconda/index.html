@@ -1,0 +1,1160 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+
+<meta charset="utf-8">
+
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Setup Git, Bash, and Anaconda on Your Computer - Earth Data Science - Earth Lab</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Earth Data Science - Earth Lab">
+<meta property="og:title" content="Setup Git, Bash, and Anaconda on Your Computer">
+
+
+  <link rel="canonical" href="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/">
+  <meta property="og:url" content="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/">
+
+
+
+  <meta property="og:description" content="Learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2018-02-05T00:00:00-07:00">
+  
+    <link rel="next" href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/" title="How to Access and use shell to set up a Working Directory">
+  
+  
+    <link rel="prev" href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/" title="Introduction to Markdown">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Earth Analytics",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Earth Data Science - Earth Lab Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="LfpevjsE0wlELv5KKOZv1T2RhRimGSiRckWv5ZC19GU" />
+<!-- don't use the old cataloged meta tags -->
+<meta name="googlebot" content="noodp">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<!-- search bar begin  - turning off for now-->
+
+<div class="search">
+<form role="search" method="get" action="http://localhost:4000/search/">
+    <input id="q" name="q"
+           placeholder="Search earth data science site" type="text">
+</form>
+</div>
+
+
+<!-- search bar END -->
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Earth Data Science - Earth Lab</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tutorials/">Tutorials</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/courses/">Courses</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tools/">Tools</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/events/">Events</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://www.colorado.edu/earthlab">Earth Lab CU</a></li>
+          
+
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+ <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<a href="http://localhost:4000"></a>
+ 
+   
+   
+     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+       <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+       <meta itemprop="position" content="" />
+     </li>
+     <span class="sep">/</span>
+   
+    
+        <li><a href="http://localhost:4000/courses/">Courses</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/">Earth analytics python</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/">Setup your python earth analytics environment</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li class="current">Setup Git, Bash, and Anaconda on Your Computer</li>
+    
+  
+</ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+
+    
+     <!--  Might be able to delete this This is the code that populates the side bar navigation if there is a class-->
+      
+
+
+
+
+<!-- make sure we're only grabbing pages for the course -->
+
+
+
+<!--<h3>Week 1 Lessons</h3>-->
+<!-- i don't think the code below is used as modules is defined lower down as well. -->
+
+<!-- This is how modules are sorted on the left hand side bar -->
+
+
+
+
+
+
+<!-- BEGIN commenting this out - this is the old code when only individual module content was on the page vs the entire course-->
+
+
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics/" ><i class="fa fa-home" aria-hidden="true"></i> Earth-analytics-python Home</a></h5>
+
+
+<!-- Just get the pages from this course -->
+
+
+
+
+
+
+<nav class="nav__list">
+
+
+
+
+
+
+<ul>
+  <li><span class="nav__sub-title"><i class="fa fa-book" aria-hidden="true"></i> Units</span>
+   <ul>
+    
+
+    <!-- Only list the week if it's not the week for the current landing page -->
+    
+
+
+      
+       
+        <li class='active-section'> <a href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/"><i class="fa fa-folder-open" aria-hidden="true"></i>
+           1. GET STARTED WITH DATA IN PYTHON / JUPYTER NOTEBOOKS</a></li>
+        
+
+<div class='active-menu'>
+      <ul>
+        
+        
+
+        
+
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Open science python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/why-open-science/><!--1.1 --> - Why Open Science</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/><!--1.2 --> - File Organization Tips</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/><!--1.3 --> - Intro to Markdown</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/><!--1.4 --> - Intro to Jupyter</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/><!--1.5 --> - Install and Import Packages</a></li>
+          
+          
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Intro setup python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/ class='active'> <!--1.1 -->- Install Git, Bash & Anaconda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/><!--1.2 --> - Bash</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/><!--1.3 --> - Set up Conda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/><!--1.4 --> - Text Editors For Coding</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Use data for science </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/google-earth-time-series/><!--1.1 --> - Google Earth Time Series</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/co-floods-data-example-python/><!--1.2 --> - Data Driven Report</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/><!--1.3 --> - Interactive Data Plots</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+      </ul>
+
+      <!-- BEGIN Learn how to lessons -->
+       <ul>
+         
+         
+       </ul>
+
+
+     </div>
+
+
+      <!-- END BEGIN Learn how to lessons -->
+
+      <!--  -->
+      
+
+    
+  </ul></li>
+ </ul>
+
+
+ <ul>
+   <li><span class="nav__sub-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Overview</span>
+    <ul>
+     
+   </ul>
+ </li>
+</ul>
+</nav>
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics-python/" ><i class="fa fa-home" aria-hidden="true"></i> earth-analytics-python Home</a></h5>
+
+    
+
+    
+
+
+
+  
+  </div>
+
+
+
+
+
+<!-- begin science / science themes side bar nav -->
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <meta itemprop="headline" content="Setup Git, Bash, and Anaconda on Your Computer">
+    <meta itemprop="description" content="Learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.">
+    <meta itemprop="datePublished" content="February 05, 2018">
+    <meta itemprop="dateModified" content="February 09, 2018">
+
+    <div class="page__inner-wrap">
+      
+
+        <header>
+          <!-- BEGIN: insert a welcome to the module block on pages that are part of a module set -->
+
+          <!-- END: insert welcome block -->
+          <h1 class="page__title" itemprop="headline">
+            Lesson 1. 
+             Setup Git, Bash, and Anaconda on Your Computer
+ </h1>
+          
+
+          
+            <div class="page__meta">
+              
+              
+              <a href="http://localhost:4000/authors/leah-wasser">Leah Wasser</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/martha-morrissey">Martha Morrissey</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/software-carpentry">Software Carpentry</a>
+              
+            </div>
+        
+
+        <br/>
+
+        
+        <div class="notice--warning header" markdown="1">
+        
+         <h1> <i class="fa fa-6 fa-book" aria-hidden="true"></i> Setup Python - Earth analytics python course module</h1>
+        Welcome to the first lesson in the <strong>Setup Python</strong> module.
+        This module reviews how to set up Python.
+        
+        </div>
+        
+
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <!-- would like to include the TOC automatically but this does weird things-->
+        
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> In This Lesson</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#learning-objectives" id="markdown-toc-learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</a></li>
+  <li><a href="#what-you-need" id="markdown-toc-what-you-need"><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need</a></li>
+  <li><a href="#bash-setup" id="markdown-toc-bash-setup">Bash Setup</a></li>
+  <li><a href="#git-setup" id="markdown-toc-git-setup">Git Setup</a></li>
+  <li><a href="#setup-anaconda" id="markdown-toc-setup-anaconda">Setup Anaconda</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>In this lesson you will learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.</p>
+
+<div class="notice--success">
+
+  <h2 id="learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h2>
+
+  <p>At the end of this activity, you will be able to:</p>
+
+  <ul>
+    <li>
+      <p>Install Bash</p>
+    </li>
+    <li>
+      <p>Open a terminal</p>
+    </li>
+    <li>
+      <p>Install anaconda using the terminal</p>
+    </li>
+  </ul>
+
+  <h2 id="what-you-need"><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need</h2>
+
+  <p>Before you start this tutorial, be sure that you have a computer with internet access.</p>
+
+  <p>Information below is adapted from materials developed by <a href="https://github.com/swcarpentry/workshop-template">Data Carpentry</a> and the <a href="https://conda.io/docs/user-guide/install/index.html">Conda documentation</a>.</p>
+
+</div>
+
+<h2 id="bash-setup">Bash Setup</h2>
+
+<h3 id="install-bash-for-windows">Install Bash for Windows</h3>
+
+<p>Download the Git for Windows installer.
+Run the installer and follow the steps bellow:</p>
+
+<ol>
+  <li>Click on “Next”.</li>
+  <li>Click on “Next”.</li>
+  <li>Click on “Next”.</li>
+  <li>Click on “Next”.</li>
+  <li>Click on “Next”.</li>
+  <li>Select “Use Git from the Windows Command Prompt” and click on “Next”. If you forgot to do this programs that you need for the workshop will not work properly. If this happens rerun the installer and select the appropriate option.</li>
+  <li>Click on “Next”. Keep “Checkout Windows-style, commit Unix-style line endings” selected.</li>
+  <li>Select “Use Windows’ default console window” and click on “Next”.</li>
+  <li>Click on “Next”.</li>
+  <li>Click on “Finish”.</li>
+</ol>
+
+<p>This will provide you with both Git and Bash in the Git Bash program.</p>
+
+<h3 id="install-bash-for-mac-os-x">Install Bash for Mac OS X</h3>
+<p>The default shell in all versions of Mac OS X is bash, so no need to install anything. You access bash from the Terminal (found in /Applications/Utilities). You may want to keep Terminal in your dock for this workshop.</p>
+
+<h3 id="install-bash-for-linux">Install Bash for Linux</h3>
+<p>The default shell is usually Bash, but if your machine is set up differently you can run it by opening a terminal and typing bash. There is no need to install anything.</p>
+
+<h2 id="git-setup">Git Setup</h2>
+
+<p>Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on <a href="https://github.com/">GitHub</a>. You will need a <a href="https://help.github.com/articles/supported-browsers/">supported</a> web browser (current versions of Chrome, Firefox or Safari, or Internet Explorer version 9 or above).</p>
+
+<p>Git installation instructions borrowed and modified from <a href="http://software-carpentry.org/">Software Carpentry</a>.</p>
+
+<h3 id="git-for-windows">Git for Windows</h3>
+<p>Git should be installed on your computer as part of your Bash install.</p>
+
+<h3 id="git-on-mac-os-x">Git on Mac OS X</h3>
+<p><a href="https://www.youtube.com/watch?v=9LQhwETCdwY">Video Tutorial</a>
+Install Git on Macs by downloading and running the most recent installer for “mavericks” if you are using OS X 10.9 and higher -or- if using an earlier OS X, choose the most recent “snow leopard” installer, from <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>. After installing Git, there will not be anything in your /Applications folder, as Git is a command line program.</p>
+
+<p class="notice--success"><i fa="" fa-star=""></i><strong>Data Tip:</strong>
+If you are running Mac OSX El Capitan, you might encounter errors when trying to use git. Make sure you update XCODE. <a href="http://stackoverflow.com/questions/32893412/command-line-tools-not-working-os-x-el-capitan">Read more - a Stack Overflow Issue</a>.</p>
+
+<h3 id="git-on-linux">Git on Linux</h3>
+<p>If Git is not already available on your machine you can try to install it via your distro’s package manager. For Debian/Ubuntu run <code class="highlighter-rouge">sudo apt-get install git</code> and for Fedora run <code class="highlighter-rouge">sudo yum install git</code>.</p>
+
+<h2 id="setup-anaconda">Setup Anaconda</h2>
+<p>We will use the Anaconda Python 3.x distribution for this course. Anaconda is a distribution of python that comes with many of the libraries that we need to work with scientific data. Anaconda also comes with Jupyter Notebooks and several other tools that are useful for working in Python.</p>
+
+<h3 id="windows">Windows</h3>
+<ol>
+  <li>
+    <p>Download the installer: <a href="https://www.anaconda.com/download/">Anaconda installer for Windows</a>. Be sure to download the python 3.x version!</p>
+  </li>
+  <li>
+    <p>Double-click the .exe file.</p>
+  </li>
+  <li>
+    <p>Follow the instructions on the screen.</p>
+  </li>
+  <li>
+    <p>If you are unsure about any setting, accept the defaults. You can change them later.</p>
+  </li>
+  <li>
+    <p>When installation is finished, from the Start menu, open the Anaconda Prompt.</p>
+  </li>
+</ol>
+
+<h3 id="mac">Mac</h3>
+<ol>
+  <li>
+    <p>Download the installer: <a href="https://www.anaconda.com/download/">Anaconda installer for macOS</a>. Be sure to download the python 3.x version!</p>
+  </li>
+  <li>
+    <p>Install: Anaconda—Double-click the .pkg file.</p>
+  </li>
+  <li>
+    <p>Follow the prompts on the installer screens.</p>
+  </li>
+  <li>
+    <p>If you are unsure about any setting, accept the defaults. You can change them later.</p>
+  </li>
+  <li>
+    <p>To make the changes take effect, close and then re-open your Terminal window.</p>
+  </li>
+</ol>
+
+<h3 id="linux">Linux</h3>
+<ol>
+  <li>
+    <p>Download the installer: <a href="https://www.anaconda.com/download/">Anaconda installer for Linux</a>. Be sure to download the python 3.x version!</p>
+  </li>
+  <li>
+    <p>In your Terminal window, run: <code class="highlighter-rouge">bash Anaconda-latest-Linux-x86_64.sh</code></p>
+  </li>
+  <li>
+    <p>Follow the prompts on the installer screens.</p>
+  </li>
+  <li>
+    <p>If you are unsure about any setting, accept the defaults. You can change them later.</p>
+  </li>
+  <li>
+    <p>To make the changes take effect, close and then re-open your Terminal window.</p>
+  </li>
+</ol>
+
+        
+
+        <!-- if the page is a course lesson, add pagination -->
+
+        
+         <!-- This is clunky code that forces pagination across lesson sets -->
+<!-- NOTE: it won't include slideshows as written which makes sense -->
+<!-- add forced pagination -->
+<!-- first, get total lesson count -->
+
+<div class="previous--next">
+
+
+
+
+<!-- if it's page one - then no previous button -->
+<!-- how do i figure out the link? i have to loop through again? -->
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+       <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/" class="btn btn--info btn--large btn-success" style="float:right" >
+         Bash
+         <i class="fa fa-4 fa-arrow-circle-right" aria-hidden="true"></i></a>
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags
+  
+  <span class="a-main-tag">
+  <i class="fa fa-fw fa-tag" aria-hidden="true"></i><a href=http://localhost:4000/tags/reproducible-science-and-programming/>Reproducible science and programming</a>:
+  </span>
+  
+    
+    <a href=http://localhost:4000/tags/reproducible-science-and-programming/python/>python</a> 
+    
+    
+  
+
+
+
+
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-09">February 09, 2018</time></p>
+        
+      </footer>
+
+      
+
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+       
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Text Editors for the Command Line and Scientific Programming
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  7 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text e...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Set up Conda Envrionment
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  4 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through installing a conda environment designed for this class.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">How to Access and use shell to set up a Working Directory
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directo...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Introduction to Markdown
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through how to install and import python packages.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+
+
+<!-- Adding analytics code -->
+
+        
+
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    <li>
+      <strong>&copy; 2018 Earth Lab -
+      <a href="http://localhost:4000/license"> View License. </a>
+      Questions? Feedback? Please file an issue on GitHub.</strong>
+    </li>
+  </ul>
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/earthlab"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-84081999-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>
+

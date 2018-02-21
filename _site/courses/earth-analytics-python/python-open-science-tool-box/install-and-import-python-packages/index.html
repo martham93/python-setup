@@ -1,0 +1,1208 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+
+<meta charset="utf-8">
+
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Introduction to Markdown - Earth Data Science - Earth Lab</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Earth Data Science - Earth Lab">
+<meta property="og:title" content="Introduction to Markdown">
+
+
+  <link rel="canonical" href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/">
+  <meta property="og:url" content="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/">
+
+
+
+  <meta property="og:description" content="This tutorial walks you through how to install and import python packages.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2018-02-05T00:00:00-07:00">
+  
+    <link rel="next" href="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/" title="Setup Git, Bash, and Anaconda on Your Computer">
+  
+  
+    <link rel="prev" href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/" title="Introduction to Markdown">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Earth Analytics",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Earth Data Science - Earth Lab Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="LfpevjsE0wlELv5KKOZv1T2RhRimGSiRckWv5ZC19GU" />
+<!-- don't use the old cataloged meta tags -->
+<meta name="googlebot" content="noodp">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<!-- search bar begin  - turning off for now-->
+
+<div class="search">
+<form role="search" method="get" action="http://localhost:4000/search/">
+    <input id="q" name="q"
+           placeholder="Search earth data science site" type="text">
+</form>
+</div>
+
+
+<!-- search bar END -->
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Earth Data Science - Earth Lab</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tutorials/">Tutorials</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/courses/">Courses</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/tools/">Tools</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/events/">Events</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://www.colorado.edu/earthlab">Earth Lab CU</a></li>
+          
+
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+ <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<a href="http://localhost:4000"></a>
+ 
+   
+   
+     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+       <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+       <meta itemprop="position" content="" />
+     </li>
+     <span class="sep">/</span>
+   
+    
+        <li><a href="http://localhost:4000/courses/">Courses</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/">Earth analytics python</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li><a href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/">Python open science tool box</a>
+        <span class="sep">/</span></li>
+    
+  
+   
+    
+        <li class="current">Introduction to Markdown</li>
+    
+  
+</ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+
+    
+     <!--  Might be able to delete this This is the code that populates the side bar navigation if there is a class-->
+      
+
+
+
+
+<!-- make sure we're only grabbing pages for the course -->
+
+
+
+<!--<h3>Week 1 Lessons</h3>-->
+<!-- i don't think the code below is used as modules is defined lower down as well. -->
+
+<!-- This is how modules are sorted on the left hand side bar -->
+
+
+
+
+
+
+<!-- BEGIN commenting this out - this is the old code when only individual module content was on the page vs the entire course-->
+
+
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics/" ><i class="fa fa-home" aria-hidden="true"></i> Earth-analytics-python Home</a></h5>
+
+
+<!-- Just get the pages from this course -->
+
+
+
+
+
+
+<nav class="nav__list">
+
+
+
+
+
+
+<ul>
+  <li><span class="nav__sub-title"><i class="fa fa-book" aria-hidden="true"></i> Units</span>
+   <ul>
+    
+
+    <!-- Only list the week if it's not the week for the current landing page -->
+    
+
+
+      
+       
+        <li class='active-section'> <a href="http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/"><i class="fa fa-folder-open" aria-hidden="true"></i>
+           1. GET STARTED WITH DATA IN PYTHON / JUPYTER NOTEBOOKS</a></li>
+        
+
+<div class='active-menu'>
+      <ul>
+        
+        
+
+        
+
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Open science python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/why-open-science/><!--1.1 --> - Why Open Science</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/><!--1.2 --> - File Organization Tips</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/use-markdown-in-jupyter-notebooks/><!--1.3 --> - Intro to Markdown</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/><!--1.4 --> - Intro to Jupyter</a></li>
+          
+          
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/ class='active'> <!--1.5 -->- Install and Import Packages</a></li>
+          
+          
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Intro setup python </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/><!--1.1 --> - Install Git, Bash & Anaconda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/><!--1.2 --> - Bash</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/><!--1.3 --> - Set up Conda</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/><!--1.4 --> - Text Editors For Coding</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+        
+          <li><span class="nav__sub-title grey"><i class="fa fa-caret-down" aria-hidden="true"></i> Use data for science </span></li>
+        <ul>
+
+      
+
+      <!-- count lessons -->
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/google-earth-time-series/><!--1.1 --> - Google Earth Time Series</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/co-floods-data-example-python/><!--1.2 --> - Data Driven Report</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+          
+          <li><a href= http://localhost:4000/courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/><!--1.3 --> - Interactive Data Plots</a></li>
+          
+          
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+       </ul>
+        
+
+        
+      </ul>
+
+      <!-- BEGIN Learn how to lessons -->
+       <ul>
+         
+         
+       </ul>
+
+
+     </div>
+
+
+      <!-- END BEGIN Learn how to lessons -->
+
+      <!--  -->
+      
+
+    
+  </ul></li>
+ </ul>
+
+
+ <ul>
+   <li><span class="nav__sub-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Overview</span>
+    <ul>
+     
+   </ul>
+ </li>
+</ul>
+</nav>
+
+<h5><a href="http://localhost:4000/course-materials/earth-analytics-python/" ><i class="fa fa-home" aria-hidden="true"></i> earth-analytics-python Home</a></h5>
+
+    
+
+    
+
+
+
+  
+  </div>
+
+
+
+
+
+<!-- begin science / science themes side bar nav -->
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <meta itemprop="headline" content="Introduction to Markdown">
+    <meta itemprop="description" content="This tutorial walks you through how to install and import python packages.">
+    <meta itemprop="datePublished" content="February 05, 2018">
+    <meta itemprop="dateModified" content="February 15, 2018">
+
+    <div class="page__inner-wrap">
+      
+
+        <header>
+          <!-- BEGIN: insert a welcome to the module block on pages that are part of a module set -->
+
+          <!-- END: insert welcome block -->
+          <h1 class="page__title" itemprop="headline">
+            Lesson 5. 
+             Introduction to Markdown
+ </h1>
+          
+
+          
+            <div class="page__meta">
+              
+              
+              <a href="http://localhost:4000/authors/leah-wasser">Leah Wasser</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/martha-morrissey">Martha Morrissey</a>, 
+              
+              
+              <a href="http://localhost:4000/authors/software-carpentry">Software Carpentry</a>
+              
+            </div>
+        
+
+        <br/>
+
+        
+
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <!-- would like to include the TOC automatically but this does weird things-->
+        
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> In This Lesson</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#learning-objectives" id="markdown-toc-learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</a></li>
+  <li><a href="#what-you-need" id="markdown-toc-what-you-need"><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need</a></li>
+  <li><a href="#what-is-a-package" id="markdown-toc-what-is-a-package">What is a Package?</a></li>
+  <li><a href="#where-to-get-python-packages" id="markdown-toc-where-to-get-python-packages">Where To Get Python Packages</a></li>
+  <li><a href="#import-a-package-in-python" id="markdown-toc-import-a-package-in-python">Import a Package in Python</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>This tutorial walks you through how to install and import python packages</p>
+
+<div class="notice--success">
+
+  <h2 id="learning-objectives"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h2>
+
+  <p>At the end of this activity, you will be able to:</p>
+
+  <ul>
+    <li>Be able to install a Python package using terminal.</li>
+    <li>Be able to explain what a package is in Python.</li>
+  </ul>
+
+  <h2 id="what-you-need"><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need</h2>
+
+  <ul>
+    <li>You will also need to have the earth-analytics-python environment set up. Instructions for setting here: <a href="/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-conda-earth-analytics-env">Set up earth analytics python environment</a></li>
+  </ul>
+
+</div>
+
+<p>Information below is adapted from materials developed by <a href="https://conda.io/docs/user-guide/tasks/manage-pkgs.html">Conda Documentation</a> on managing packages.</p>
+
+<h2 id="what-is-a-package">What is a Package?</h2>
+
+<p>A package, in Python is a bundle of pre-built functionality. You can think of a package like a toolbox filled with tools. The tools in the toolbox can be compared to functions in Python. Except when working with Python, the tools, do things like calculate a mathematical function like a sum or create a plot. There are many different packages available for python. Some of these are optimized for scientific applications including:</p>
+<ul>
+  <li>Statistics</li>
+  <li>Machine learning</li>
+  <li>Using geospatial data</li>
+  <li>Visualizing data</li>
+</ul>
+
+<h2 id="where-to-get-python-packages">Where To Get Python Packages</h2>
+
+<p>There are many different repositories where Python libraries are maintained and can be installed from. When installing libraries on your computer or in an online environment, it is important to consider where the library is maintained.</p>
+
+<p>There are three main python package repositories to download python libraries from:</p>
+<ul>
+  <li>Conda: this is the default repository that is used and maintained for the Anaconda distribution of Python. To install libraries from conda, you use the syntax <code class="highlighter-rouge">conda install</code> at the command line..</li>
+  <li>Conda-forge: Conda-forge is community maintained. We have found that  installing many of the spatial libraries using conda-forge will minimize library conflicts.</li>
+  <li>Pip - Python Package Index (pip) is another way to install python packages.</li>
+</ul>
+
+<p class="notice--success"><i fa="" fa-star=""></i><strong>Data Tip:</strong>
+Sometimes python libraries are on github. You can install python libraries from github using <code class="highlighter-rouge">pip install git+git://github.com/path-to-github-user/repo-name.git</code></p>
+
+<p>It’s often good practice to download as many packages as possible from the same repository. For example is you use pip to install geopandas and then try to install shapely from conda-forge, the odds of conflicts often increase. When you encounter these conflicts, often you will not be able to load the libraries and start coding. Conflicts between package dependencies can thus be frustrating when all you want to do is start coding and instead you need to figure out how to properly install a library.</p>
+
+<p>For consistency, in this course you will download most  libraries from the <strong>conda-forge</strong> repository.</p>
+
+<h3 id="install-a-package-in-a-python-environment">Install a Package In a Python Environment</h3>
+
+<p>You can add as many packages as you want to a Python environment. However, it is important to keep track of what environment you are adding the package to. If you add a the geopandas python package to your root python environment and then try to use geopandas in another environment, it won’t work!</p>
+
+<p>To add a package you need to complete the following steps:</p>
+<ol>
+  <li>Open a terminal so you have access to the command line.</li>
+  <li>Activate the python environment that you wish to add the package to.</li>
+  <li>Install the package that you want to add to that environment</li>
+</ol>
+
+<p>Note, the example code below assumes that you have already setup the earth-analytics-python environment. The code below will activate that environment and then add the <code class="highlighter-rouge">statsmodels</code> library to it. 
+Note that you are using conda to install statsmodels in this example.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Source activate earth-analytics-python
+Conda install conda-forge statsmodels
+
+</code></pre></div></div>
+
+<p>Note that you can also install a library to an environment directly using the –name argument.  To install a specific library such as SciPy into an existing environment “myenv” you’d use the following code:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+conda install conda-forge <span class="nt">--name</span> myenv SciPy
+
+</code></pre></div></div>
+
+<p>To install the scipy library to the earth-analytics-python environment, you’d use the code below:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Conda install conda-forge  <span class="nt">--earth-analytics-python</span> scipy
+
+</code></pre></div></div>
+
+<p>Following the examples above, if you do not either specify the environment name, OR activate the environment that you wish to install the package to, then the package installs into the current, active environment. The code below will install a package into the currently active environment</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+conda install conda-forge bokeh
+
+</code></pre></div></div>
+
+<p>In the example below, you use conda rather than conda-forge to install a package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">source </span>activate earth-analytics-python
+conda install packagename
+
+</code></pre></div></div>
+
+<h3 id="view-list-of-all-installed-packages-in-an-environment">View List of All Installed Packages in an Environment</h3>
+
+<p>Sometimes you want to view all of the packages installed in a particular environment. To see the installed packages in the activate environment in the terminal type:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+conda list
+
+</code></pre></div></div>
+
+<p>Conda list will show you:</p>
+<ol>
+  <li>What packages are installed</li>
+  <li>What version of each package is installed</li>
+  <li>Where you installed each package from (pip, conda, conda-forge)</li>
+</ol>
+
+<p>IMPORTANT: note that when you run <code class="highlighter-rouge">conda list</code> it’s listing libraries installed in the current active environment.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(earth-analytics-python)~ username $ conda list
+# packages in environment at //anaconda/envs/earth-analytics-python:
+#
+affine                    2.1.0                      py_1    conda-forge
+alembic                   0.9.7                     &lt;pip&gt;
+altair                    1.2.1                      py_0    conda-forge
+appnope                   0.1.0                    py36_0    conda-forge
+asn1crypto                0.22.0                   py36_0    conda-forge
+attrs                     17.4.0                     py_0    conda-forge
+backports                 1.0                      py36_1    conda-forge
+backports.functools_lru_cache 1.4                      py36_1    conda-forge
+blas                      1.1                    openblas    conda-forge
+bleach                    2.0.0                    py36_0    conda-forge
+boost                     1.65.1                   py36_0    conda-forge
+
+</code></pre></div></div>
+
+<h2 id="import-a-package-in-python">Import a Package in Python</h2>
+<p>Once you have installed the packages that you require,you can call them in python at the command line, in a script or in a Jupyter notebook. You have to explicitly call and load each library that you need in your notebook or script in order for the functions (or tools) in the library to be available in your code. 
+Reproducibility Tip: IMPORTANT: Load all of the packages that you will need in the first code cell of a Jupyter notebook. By doing this, you or anyone using your Notebook will know what libraries they need to install in order to run your Notebook.</p>
+
+<p>Once the package is loaded you can use it in your code. Like this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy
+numpy.sin(0)
+0
+</code></pre></div></div>
+<p>Import _____ (name of package)</p>
+
+<h3 id="package-shortcuts">Package Shortcuts</h3>
+<p>In the example above, sin function was called using the full python library name numpy.sin. Doing this over and over will make your code more verbose. Thus you will often see abbreviations used to call functions within a specific package. The syntax to create an library abbreviation is:
+<code class="highlighter-rouge">import _____ (name of package) as ____</code>
+Using the example above, let’s now create an abbreviation for the numpy package. It’s common to use <code class="highlighter-rouge">np</code> for numpy:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
+numpy.sin(0)
+0
+</code></pre></div></div>
+
+<figure>
+ <a href="http://localhost:4000/images/python-screenshots/setup-python/import-package.png">
+ <img src="http://localhost:4000/images/python-screenshots/setup-python/import-package.png" /></a>
+ <figcaption> Jupyter Notebook with a rendered markdown cell. 
+ </figcaption>
+</figure>
+
+<h3 id="import-libraries-at-the-top-of-your-script">Import Libraries at the Top of Your Script</h3>
+
+<p>It is good practice to import all of the packages that you will need to run code in your notebook in the first code cell in a Jupyter notebook. This allows anyone looking at your code - to immediately know what packages they need to run the code. To import a package you use the <code class="highlighter-rouge">import</code> function. Your notebook will then look like this:</p>
+
+<figure>
+ <a href="http://localhost:4000/images/python-screenshots/setup-python/import_packages-first-cell.png">
+ <img src="http://localhost:4000/images/python-screenshots/setup-python/import_packages-first-cell.png" /></a>
+ <figcaption> Jupyter Notebook with the first cell importing the package numpy to be used with the abbreviations.
+ </figcaption>
+</figure>
+
+<p>Once you have imported all of the packages that you need in your code, you have access to all of the functions contained within each library. An example of the functions available in numpy package is below
+np.() And hit the tab key and then a list of callable functions will appear.</p>
+
+<figure>
+ <a href="http://localhost:4000/images/python-screenshots/setup-python/tab-complete.png">
+ <img src="http://localhost:4000/images/python-screenshots/setup-python/tab-complete.png" /></a>
+ <figcaption> Jupyter Notebook with the first cell importing the package numpy to be used with the abbreviations.
+ </figcaption>
+</figure>
+
+
+        
+
+        <!-- if the page is a course lesson, add pagination -->
+
+        
+         <!-- This is clunky code that forces pagination across lesson sets -->
+<!-- NOTE: it won't include slideshows as written which makes sense -->
+<!-- add forced pagination -->
+<!-- first, get total lesson count -->
+
+<div class="previous--next">
+
+
+
+
+<!-- if it's page one - then no previous button -->
+<!-- how do i figure out the link? i have to loop through again? -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+        <a href="http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/intro-to-jupyter-notebooks/" class="btn btn--info btn--large btn-success">
+          <i class="fa fa-4 fa-arrow-circle-left fa-4" aria-hidden="true"></i>
+          Intro to Jupyter </a>
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+      
+
+      
+      
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags
+  
+  <span class="a-main-tag">
+  <i class="fa fa-fw fa-tag" aria-hidden="true"></i><a href=http://localhost:4000/tags/reproducible-science-and-programming/>Reproducible science and programming</a>:
+  </span>
+  
+    
+    <a href=http://localhost:4000/tags/reproducible-science-and-programming/python/>python</a> 
+    
+    
+  
+
+
+
+
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-15">February 15, 2018</time></p>
+        
+      </footer>
+
+      
+
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+       
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Text Editors for the Command Line and Scientific Programming
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  7 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text e...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Set up Conda Envrionment
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  4 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through installing a conda environment designed for this class.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">How to Access and use shell to set up a Working Directory
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directo...</p>
+    </article>
+  </a>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/courses/earth-analytics-python/setup-your-python-earth-analytics-environment/setup-git-bash-anaconda/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+      <h2 class="archive__item-title" itemprop="headline">Setup Git, Bash, and Anaconda on Your Computer
+</h2>
+
+
+     
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Learn how to install Git, GitBash (a version of command line Bash) and Python Anaconda distribution on your computer.
+</p>
+    </article>
+  </a>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+
+
+<!-- Adding analytics code -->
+
+        
+
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    <li>
+      <strong>&copy; 2018 Earth Lab -
+      <a href="http://localhost:4000/license"> View License. </a>
+      Questions? Feedback? Please file an issue on GitHub.</strong>
+    </li>
+  </ul>
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/earthlab"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-84081999-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>
+
