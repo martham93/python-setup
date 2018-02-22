@@ -3,7 +3,7 @@ layout: single
 title: 'Use Google Earth Time Series Images to Explore Flood Impacts'
 excerpt: "Learn how to use the time series feature in Google Earth to view before and after images of a location."
 authors: ['Leah Wasser', 'Martha Morrissey', NEON Data Skills]
-modified: 2018-02-15
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['co-floods-1-intro']
 permalink: /courses/earth-analytics-python/01-science-toolbox/google-earth-time-series/
@@ -62,8 +62,8 @@ Colorado soil conditions and other factors yielded devastating flooding across
 the Front Range in Colorado, USA.
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png">
- <img src="{{ site.url }}/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png" alt="North St Vrain before and after 2013 flood."></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/N_St_Vrain_before_after_CreditBoulderCo.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/N_St_Vrain_before_after_CreditBoulderCo.png" alt="North St Vrain before and after 2013 flood."></a>
  <figcaption> The St. Vrain River in Boulder County, CO after (left) and before
  (right) the 2013 flooding event.  Source: Boulder County via <a href="http://krcc.org/post/post-flood-planning-boulder-county" target="_blank"> KRCC</a>.
  </figcaption>
@@ -87,10 +87,8 @@ and after the floods.
 * Open Google Earth
 * Double click on the `.kmz` file that you downloaded above. It should open in Google Earth.
 
-<i fa fa-star></i>**Tip:** If the `.kmz` file doesn't automatically open when you
-double click on it, try to Open Google Earth,
-go to File --> Open in Google Earth. Finally, navigate to the
-location of your downloaded file (`~Documents/data/co-flood/locations`) and open it.
+<i class="fa fa-star"></i>**Data Tip:**
+If the `.kmz` file doesn't automatically open when you double click on it, try to Open Google Earth, go to File --> Open in Google Earth. Finally, navigate to the location of your downloaded file (`~Documents/data/co-flood/locations`) and open it.
 {: .notice--success}
 
 * Once you have the `.kmz` file open, notice it is listed in the **Temporary Places** section
@@ -99,8 +97,8 @@ Boulder, Colorado. If it doesn't double click on the text `Locations of Signific
 * Click on the show historical imagery button in Google Earth
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/01-floods/google-earth-time.png">
- <img src="{{ site.url }}/images/python-screenshots/01-floods/google-earth-time.png" alt="google earth time series feature."></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/google-earth-time.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/google-earth-time.png" alt="google earth time series feature."></a>
  <figcaption> The `show historical imagery` button allows you to turn on and slide
  through imagery from various points in time within Google Earth. It is the button
  outlined in pink in the above imaged.

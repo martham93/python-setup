@@ -1,9 +1,9 @@
 ---
 layout: single
-title: 'Introduction to Markdown'
+title: 'Install and Import Python Packages'
 excerpt: 'This tutorial walks you through how to install and import python packages.'
-authors: ['Leah Wasser', 'Martha Morrissey', 'Software Carpentry']
-modified: 2018-02-15
+authors: ['Martha Morrissey','Leah Wasser', 'Software Carpentry']
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['open-science-python']
 permalink: /courses/earth-analytics-python/python-open-science-tool-box/install-and-import-python-packages/ 
@@ -61,7 +61,7 @@ There are three main python package repositories to download python libraries fr
 * Pip - Python Package Index (pip) is another way to install python packages. 
 
 
-<i fa fa-star></i>**Data Tip:**
+<i class="fa fa-star"></i>**Data Tip:**
 Sometimes python libraries are on github. You can install python libraries from github using `pip install git+git://github.com/path-to-github-user/repo-name.git`
 {: .notice--success}
 
@@ -183,8 +183,8 @@ numpy.sin(0)
 ```
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/setup-python/import-package.png">
- <img src="{{ site.url }}/images/python-screenshots/setup-python/import-package.png"></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/import-package.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/import-package.png"></a>
  <figcaption> Jupyter Notebook with a rendered markdown cell. 
  </figcaption>
 </figure>
@@ -195,8 +195,8 @@ It is good practice to import all of the packages that you will need to run code
 
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/setup-python/import_packages-first-cell.png">
- <img src="{{ site.url }}/images/python-screenshots/setup-python/import_packages-first-cell.png"></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/import_packages-first-cell.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/import_packages-first-cell.png"></a>
  <figcaption> Jupyter Notebook with the first cell importing the package numpy to be used with the abbreviations.
  </figcaption>
 </figure>
@@ -206,8 +206,8 @@ Once you have imported all of the packages that you need in your code, you have 
 np.() And hit the tab key and then a list of callable functions will appear. 
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/setup-python/tab-complete.png">
- <img src="{{ site.url }}/images/python-screenshots/setup-python/tab-complete.png"></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/tab-complete.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/tab-complete.png"></a>
  <figcaption> Jupyter Notebook with the first cell importing the package numpy to be used with the abbreviations.
  </figcaption>
 </figure>

@@ -2,8 +2,8 @@
 layout: single
 title: 'Text Editors for the Command Line and Scientific Programming'
 excerpt: 'Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text editor at the command line.'
-authors: ['Leah Wasser', 'Martha Morrissey',  'Data Carpentry']
-modified: 2018-02-19
+authors: ['Martha Morrissey', 'Leah Wasser',  'Data Carpentry']
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['setup-python-jupyter']
 permalink: /courses/earth-analytics-python/get-started-with-python-jupyter/text-editors-for-science-workflows/

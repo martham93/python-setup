@@ -2,8 +2,8 @@
 layout: single
 title: 'Set up Conda Envrionment'
 excerpt: 'This tutorial walks you through installing a conda environment designed for this class.'
-authors: ['Leah Wasser', 'Martha Morrissey',  'Data Carpentry']
-modified: 2018-02-15
+authors: ['Martha Morrissey', Leah Wasser', 'Data Carpentry']
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['setup-python-jupyter']
 permalink: /courses/earth-analytics-python/get-started-with-python-jupyter/setup-conda-earth-analytics-environment/
@@ -56,7 +56,7 @@ Information below is adapted from materials developed by the Conda documentation
 
 Anaconda allows you to have different environments installed on your computer to access different versions of python and different libraries. Sometimes libraries conflict which causes errors and packages not to work. To avoid conflicts, we created an environment specifically for this earth analytics course that contains all of the spatial libraries that you will need.
 
-<i fa fa-star></i>**Data Tip:**
+<i class="fa fa-star"></i>**Data Tip:**
 For more information about conda environments check out the [conda documentation](https://conda.io/docs/user-guide/tasks/index.html).  
 {: .notice--success }
 
@@ -113,7 +113,7 @@ dependencies:
 Follow these steps below to get your environment ready.
 An environment for conda has been created specifically for this course. To load this:
 
-1. Download the custom yaml list from <link>/download button
+1. [<i class="fa fa-download" aria-hidden="true"></i> Download the yaml file for this course](https://ndownloader.figshare.com/files/10549699){:data-proofer-ignore='' .btn }
 2. Move this file into your earth-analytics directory 
 3. Open your favorite bash envt. This may cygwin or gitbash on windows or terminal on a mac. 
 4. Navigate to your earth-analytics directory on your computer. (remember the cd command in terminal means change directory) 
@@ -122,7 +122,7 @@ An environment for conda has been created specifically for this course. To load 
 Note that it takes a bit of time to run this setup as it needs to download and install each library
 IMPORTANT: you need to have internet access for this to run! 
 
-<i fa fa-star></i>**Data Tip:**
+<i class="fa fa-star"></i>**Data Tip:**
 The instructions above will only work if you run them in the directory where you placed the environment.yml file
 {: .notice--success }
 
@@ -163,14 +163,11 @@ Before doing work for this class always make sure that the earth analytics-pytho
 
 
 
-<i fa fa-star></i>**Data Tip:**
+<i class="fa fa-star"></i>**Data Tip:**
 Notice how after you restart the terminal, the Earth Analytics environment is no longer active. 
 Activate the earth-analytics-python environment by running:
-
 ```
-
 source activate earth-analytics-python
-
 ```
 {: .notice--success }
 

@@ -3,7 +3,7 @@ layout: single
 title: 'Explore Precipitation and Stream Flow Data Using Interactive Plots: The 2013 Colorado Floods'
 excerpt: "Practice interpreting data on plots that show rainfall (precipitation) and stream flow (discharge) as it changes over time."
 authors: ['Leah Wasser', 'NEON Data Skills', 'Martha Morrissey']
-modified: 2018-02-15
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['co-floods-1-intro']
 permalink: /courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/precip-discharge/
@@ -51,8 +51,8 @@ In this lesson you will explore two of the  drivers of the flood and
 associated flood impacts. A **driver** is a cause of a disturbance events.
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png">
- <img src="{{ site.url }}/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png" alt="North St Vrain before and after 2013 flood."></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/N_St_Vrain_before_after_CreditBoulderCo.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/N_St_Vrain_before_after_CreditBoulderCo.png" alt="North St Vrain before and after 2013 flood."></a>
  <figcaption> The St. Vrain River in Boulder County, CO after (left) and before
  (right) the 2013 flooding event.  Source: Boulder County via <a href="http://krcc.org/post/post-flood-planning-boulder-county" target="_blank"> KRCC</a>.
  </figcaption>
@@ -70,7 +70,7 @@ falls from clouds including rain, hail and snow.
 
 <figure>
  <a href="https://plot.ly/~NEONDataSkills/6/total-monthly-precipitation-boulder-co-station/" target="_blank">
- <img src="{{ site.url }}/images/python-screenshots/01-floods/N_St_Vrain_before_after_CreditBoulderCo.png" alt="North St Vrain before and after 2013 flood."></a>
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/N_St_Vrain_before_after_CreditBoulderCo.png" alt="North St Vrain before and after 2013 flood."></a>
  <figcaption> Total Monthly Precipitation. Click on the image to EXPLORE the data interactively! Data Source: NOAA <a href="http://krcc.org/post/post-flood-planning-boulder-county" target="_blank"> KRCC</a>.
  </figcaption>
 </figure>
@@ -106,7 +106,7 @@ increases significantly during a flood event.
 
 <figure>
  <a href="https://plot.ly/~leahawasser/166/stream-discharge-boulder-creek-2013/">
- <img src="{{ site.url }}/images/course-materials/earth-analytics/week-1/intro-co-floods/stream-discharge-166.png" alt="Stream discharge plot."></a>
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/stream-discharge-166.png" alt="Stream discharge plot."></a>
  <figcaption> 30 Years of Stream Discharge - Click on the graphic to
  explore the data interactively.
  </figcaption>
@@ -114,7 +114,7 @@ increases significantly during a flood event.
 
 <figure>
  <a href="https://plot.ly/~leahawasser/150/stream-discharge-boulder-creek-2013/">
- <img src="{{ site.url }}/images/course-materials/earth-analytics/week-1/intro-co-floods/stream-discharge-150.png" alt="Stream discharge plot."></a>
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/stream-discharge-150.png" alt="Stream discharge plot."></a>
  <figcaption> 2013 Stream Discharge - Boulder Creek 2013 - Click on the graphic to
  explore the data interactively.
  </figcaption>

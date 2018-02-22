@@ -2,12 +2,11 @@
 layout: single
 title: 'How to Access and use shell to set up a Working Directory'
 excerpt: 'This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directory for the course.'
-authors: ['Leah Wasser', 'Martha Morrissey',  'Data Carpentry']
-modified: 2018-02-15
+authors: ['Martha Morrissey','Leah Wasser', 'Data Carpentry']
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['setup-python-jupyter']
 permalink: /courses/earth-analytics-python/get-started-with-python-jupyter/introduction-to-bash-shell/ 
-
 nav-title: 'Bash'
 week: 1
 sidebar:
@@ -64,8 +63,8 @@ In the earliest days of computing, the computer itself which processed data or p
 Today, we have computers that can both provide commands AND perform the computation. And those computers have graphic interfaces (known as GUIs) that make it easy to perform tasks. However, we still need to access the command line or terminal for certain tasks. In this lesson you will learn how to set up a command line interface on your computer. 
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/setup-python/early-terminal.png">
- <img src="{{ site.url }}/images/python-screenshots/setup-python/early-terminal.png"></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/early-terminal.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/early-terminal.png"></a>
  <figcaption> Early Computer and Terminal.
  </figcaption>
 </figure>
@@ -179,32 +178,37 @@ $ ls documents
 
 Notice that mkdir command has no ouput, and that since notes is a relative path (i.e., doesn’t have a leading slash), the new directory is created in the current working directory. 
 
-   
-    
-## Exercises 
-
-Project organization is integral to efficient research. Use Bash to  create an earth-analytics project directory. You will use this directory throughout this course. 
-
-You will then create a  \data directory within the earth-analytics directory to save all of the data that you will need to complete the homework assignments and follow along with the course.
-
-
-### Create earth-analytics Project Directory
-
-
-Create an earth-analytics project directory (or folder). 
-
 <i class="fa fa-star"></i> **Data Tip:** 
 Directory vs Folder: You can think of a directory as a folder. However the term directory considers the relationship between that folder and the folders within it and around it. 
 {: .notice--success}
 
-1. Navigate to the Documents directory on your computer.
+
+<i class="fa fa-star"></i> **Data Tip:**
+Notice that you are creating an easy to read directory name. The name has no spaces and uses all lower case to support machine reading down the road. Sometimes this format of naming using dashes is referred to as a slug.
+{: .notice--success}
+
+
+<div class="notice--warning" markdown="1">
+
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Exercise
+    
+Project organization is integral to efficient research. Use Bash to create an `earth-analytics` project directory. You will use this directory throughout this course. 
+
+You will then create a  `\data` directory within the `earth-analytics` directory to save all of the data that you will need to complete the homework assignments and follow along with the course.
+
+### Create earth-analytics Project Directory
+
+
+Create an `earth-analytics` project directory (or folder). 
+
+* Navigate to the Documents directory on your computer.
 
 ```bash 
 $ cd documents
 ```
 
 
-2. In the directory, create a NEW DIRECTORY called earth-analytics.
+* In the directory, create a NEW DIRECTORY called `earth-analytics`.
 
 
 ``` bash 
@@ -212,11 +216,7 @@ $ mkdir earth-analytics
 ```
 
 
-<i class="fa fa-star"></i> **Data Tip:**
-Notice that you are creating an easy to read directory name. The name has no spaces and uses all lower case to support machine reading down the road. Sometimes this format of naming using dashes is referred to as a slug.
-{: .notice--success}
-
-3. Next change directories to be inside of the earth-analytics directory and create a directory within it called data
+*  Next change directories to be inside of the earth-analytics directory and create a directory within it called `data`
 
 ```bash 
 $ cd earth-analytics 
@@ -225,7 +225,7 @@ $ mkdir data
 
 
 
-4. Let’s go back to the home directory and confirm we can then access the directories we just made.
+* Let’s go back to the home directory and confirm we can then access the directories we just made.
 
 ```bash 
 
@@ -239,3 +239,5 @@ $ ls
 
 data/
 ```
+
+</div>

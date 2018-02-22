@@ -3,7 +3,7 @@ layout: single
 title: 'Work with Precipitation Data in R - 2013 Colorado Floods'
 excerpt: "Learn how to use the time series feature in Google Earth to view before / after images of a location."
 authors: ['Leah Wasser', 'Mariela Perignon', 'NEON Data Skills', 'Martha Morrissey']
-modified: 2018-02-15
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['co-floods-1-intro']
 permalink: /courses/earth-analytics-python/01-science-toolbox/co-floods-data-example-python/co-floods-data-example-python/

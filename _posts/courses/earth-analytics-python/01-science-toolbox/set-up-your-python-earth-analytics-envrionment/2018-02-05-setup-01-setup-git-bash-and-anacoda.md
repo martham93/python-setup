@@ -13,7 +13,7 @@ module-title: 'Setup Python'
 module-nav-title: 'Intro Setup Python'
 module-description: 'This module reviews how to set up Python.'
 module-type: 'class'
-class-order: 3
+class-order: 1
 course: "earth-analytics-python"
 week: 1
 sidebar:
@@ -100,7 +100,7 @@ Git should be installed on your computer as part of your Bash install.
 Install Git on Macs by downloading and running the most recent installer for "mavericks" if you are using OS X 10.9 and higher -or- if using an earlier OS X, choose the most recent "snow leopard" installer, from [this list](http://sourceforge.net/projects/git-osx-installer/files/). After installing Git, there will not be anything in your /Applications folder, as Git is a command line program.
 
 
- <i fa fa-star></i>**Data Tip:**
+<i class="fa fa-star"></i>**Data Tip:**
 If you are running Mac OSX El Capitan, you might encounter errors when trying to use git. Make sure you update XCODE. [Read more - a Stack Overflow Issue](http://stackoverflow.com/questions/32893412/command-line-tools-not-working-os-x-el-capitan).
 {: .notice--success }
 

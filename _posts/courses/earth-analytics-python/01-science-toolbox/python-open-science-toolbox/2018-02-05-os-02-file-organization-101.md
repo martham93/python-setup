@@ -3,7 +3,7 @@ layout: single
 title: 'File Organization Tips'
 excerpt: 'This lesson provides a broad overview of file organization principles.'
 authors: ['Leah Wasser', 'Martha Morrissey', 'Data Carpentry']
-modified: 2018-02-15
+modified: 2018-02-21
 category: [courses]
 class-lesson: ['open-science-python']
 permalink: /courses/earth-analytics-python/python-open-science-tool-box/best-practices-file-organization/
@@ -63,8 +63,8 @@ Your goal when structuring a project directory is to use a naming convention tha
 
 
 <figure>
- <a href="{{ site.url }}/images/python-screenshots/setup-python/file-naming.png">
- <img src="{{ site.url }}/images/python-screenshots/setup-python/file-naming.png"></a>
+ <a href="{{ site.url }}/images/courses/earth-analytics-python/python-interface/file-naming.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics-python/python-interface/file-naming.png"></a>
  <figcaption> Compare the list of file names on the LEFT to those on the right which ones are easier to quickly understand? Source: Jenny Bryan, Reproducible Science Curriculum.
  </figcaption>
 </figure>

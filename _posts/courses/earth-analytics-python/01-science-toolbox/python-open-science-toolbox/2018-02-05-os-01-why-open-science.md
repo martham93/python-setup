@@ -13,7 +13,7 @@ module-title: 'Open Science Python'
 module-nav-title: 'Open Science Python'
 module-description: 'This module reviews why open science and best practices in python.'
 module-type: 'class'
-class-order: 3
+class-order: 2
 course: "earth-analytics-python"
 week: 1
 sidebar:
@@ -86,7 +86,7 @@ Mixing markdown with code in Jupyter Notebooks provides many advantages:
 * Easy to share: If all of your analysis is contained and described in a one or more notebooks, it makes it easy to share with a colleague. Your colleague can also easily replicate your workflow.
 
 
-<i fa fa-star></i>**Data Tip:**
+<i class="fa fa-star"></i>**Data Tip:**
 You can easily create fully reproducible jupyter notebooks that can be run online using [my binder](https://mybinder.org/). 
 {: .notice--success }
 
@@ -98,7 +98,7 @@ The link between data, code and results makes Jupyter Notebooks powerful. You ca
 
 Jupyter notebooks (.ipynb) as a format is an efficient tool. If you need to make changes to your workflow, you can simply modify the report and re-render the report.This creates an efficient workflow. Your future self will appreciate it too. Jupyter Notebook provides documentation for you to see what code you used to create a figure or to analyze the data.
 
-<i fa fa-star></i>**Data Tip:**
+<i class="fa fa-star"></i>**Data Tip:**
 Many of the Earth Lab lessons, including this one, were created using Jupyter Notebooks!
 {: .notice--success }
 

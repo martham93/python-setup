@@ -154,8 +154,8 @@ plt.show()
 /images/python-screenshots/hw/hw-01-ex-nb.png
 
 <figure>
-<a href="/images/python-screenshots/hw/hw01-simple-plot.png">
-<img src="/images/python-screenshots/hw/hw01-simple-plot.png" alt="example plot.">
+<a href="/images/courses/earth-analytics-python/python-interface/hw01-simple-plot.png">
+<img src="/images/courses/earth-analytics-python/python-interface/hw01-simple-plot.png" alt="example plot.">
 </a>
 <figcaption>
 If your code ran properly, the resulting plot should look like this one.
@@ -163,8 +163,8 @@ If your code ran properly, the resulting plot should look like this one.
 </figure>
 
 <figure>
-<a href="/images/python-screenshots/hw/hw-01-ex-nb.png">
-<img src="/images/python-screenshots/hw/hw-01-ex-nb.png" alt="Jupyter Notebook example image.">
+<a href="/images/courses/earth-analytics-python/python-interface/hw-01-ex-nb.png">
+<img src="/images/courses/earth-analytics-python/python-interface/hw-01-ex-nb.png" alt="Jupyter Notebook example image.">
 </a>
 <figcaption>
 Your Jupyter Notebook should look something like the one above (with your own text
@@ -202,8 +202,8 @@ is called something different. Is there a `data` directory within the earth-anal
 directory?
 
 <figure>
-<a href="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/data-dir-wk-1.png">
-<img src="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/data-dir-wk-1.png" alt="data directory example image.">
+<a href="/images/courses/earth-analytics-python/python-interface/working-dir-os.png">
+<img src="/images/courses/earth-analytics-python/python-interface/working-dir-os.png" alt="data directory example image.">
 </a>
 <figcaption>
 Your working directory should contain a `/data` directory.
